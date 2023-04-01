@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Weather app login page</title>
+    {{>header}}
+    <link rel="stylesheet" href="/css/style2.css">
+    <!-- <link rel="stylesheet" href="/css/style3.css"> -->
+</head>
+
+<body>
+    <div class="login-box">
+        <h1>Login</h1>
+        <form action="/api/user/login" method="POST" id="log-form">
+            <label>Username</label>
+            <input type="text" id="userName" placeholder="Enter Your username" value="" name="username" />
+            <label>Password</label>
+            <input type="Password" id="PassWord" placeholder="Enter Your Passward" value="" name="password" />
+            <button type="submit" class="btnLogin" value="login" id="submitbtn" />Login</button>
+        </form>
+        <p class="para-2 mb-6">
+            Forget Password? <a href="/api/auth/login">Click here</a>
+        </p>
+        <p class="para-2">
+            Not have an account? <a href="/api/auth/register">Sign Up Here</a>
+        </p>
+    </div>
+    <!-- <script src="/js/users.js"></script>  -->
+</body>
+
+</html>

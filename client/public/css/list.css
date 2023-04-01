@@ -1,0 +1,114 @@
+.container-box{
+	margin: 20px 30px;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.product-box2{
+    position: relative;
+    width: 80%;
+    border: 2px solid black;
+    height: 90px;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    border-radius: 8px;
+    box-shadow: 0 0 2px 1px black;
+    clear: both;
+    margin-bottom: 3rem;
+}
+
+.product-box2 h4{
+	margin-left: 2rem;
+}
+
+.product-box2 .content{
+        margin-left: 8rem;
+        display:flex;
+    align-items:center;
+    justify-content: left;
+    flex-direction: row;
+/*     border: 1px solid green; */
+}
+
+.product-box2 .content .left{
+    display:flex;
+    justify-content: left;
+    align-items:left;
+    flex-direction: column;
+
+}
+
+.product-box2 .content .left .combine{
+    display:flex;
+    flex-direction: row;
+/*     border: 1px solid red; */
+}
+.product-box2 .content .left h4{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+/*  border: 1px solid grey; */
+}
+.combine .price, .combine .discount{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.combine .discount{
+    margin-left: 3rem;
+}
+.product-box2 .right{
+    position: absolute;
+    right: 3rem;
+    float: right;
+/*     border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.btn{
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 6px 10px;
+    background: #fff;
+        border-radius: 10px;
+        border: 2px solid black;
+        box-shadow: 0 0 1px 0px black;
+
+}
+
+.rmargin{
+    margin-right: 2rem;
+}
+
+
+/* for single user */
+.product-box3{
+    position: relative;
+    width: 60%;
+    border: 2px solid black;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    border-radius: 8px;
+    box-shadow: 0 0 2px 1px black;
+    clear: both;
+    margin-bottom: 3rem;
+}
+.product-box3 .box{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.product-box3 .box p{
+	font-size: 1rem;
+	font-weight: bold;
+	padding: 4px 6px;
+}

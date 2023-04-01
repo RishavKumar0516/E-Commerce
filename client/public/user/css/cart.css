@@ -1,0 +1,67 @@
+.horizental-line{
+	display: block;
+	height: 8px;
+	border: 2px solid rgb(46,46,46);
+	background: rgb(46,46,46);
+	color: rgb(46,46,46);
+}
+.price-section{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 20px 50px;
+	justify-content: center;
+
+    
+}
+.ln1{
+	display: flex;
+	width: 100%;
+	padding: 10px 0px;
+	justify-content: space-between;
+
+}
+.oneline{
+	display: block;
+	font-size:.95em;
+    font-weight:450;
+    color:#3d3d3d;
+ 
+}
+.total-style{
+	color: rgb(46,46,46);
+	font-weight: 1000;
+	font-family: bold;
+	font-size:.95em;
+
+}
+.place-order{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+.deletebutton{
+	display: inline-block;
+	position: absolute;
+	right :30px;
+	top: 50%;
+	padding:5px 10px;
+	font-size:.75em;
+	color:#74e40b;
+    background:#fff;
+    text-transform:uppercase;
+    text-spacing:normal;
+    font-weight:700;
+    border-radius:5px;
+    transition:0.5s;
+    box-shadow: 0 0 0 1px #74e40b;
+    cursor: pointer;
+
+}
+.deletebutton:hover{
+    background:#74e40b;
+    color:#fff;
+    box-shadow: 0 0 0 1px #74e40b;
+}

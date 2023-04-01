@@ -1,0 +1,79 @@
+        <!-- creating navigation bar -->
+    <div class="navigation">
+        <!-- section-1 -->
+        <a href="#" class="logo">Allen Parker</a>
+        <div class="menu-toggle"></div>
+
+        <div class="navbar">
+            <div class="icon">
+                <a href="/api/index" class="active">Home</a>
+                <a href="/api/index/showproducts">Product</a>
+                {{#if title}}
+                <a href="#">{{title}}</a>
+                <a href="/api/index/like">Like</a>
+                <a href="/api/user/cart">Cart</a>
+                <a href="/api/user/logout">Logout</a>
+                {{else}}
+                <a href="/api/user/login">login</a>
+                <a href="/api/user/register">register</a>
+                {{/if}}
+
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container-fluid main_menu">
+    <div class="row">
+        <div class="col-md-10 col-12 mx-auto my-3">
+            <nav class="navbar navbar-expand-lg" style>
+                <a class="navbar-brand" href="#"> <i class="far fa-snowflake"></i>Allen Parker<i class="far fa-snowflake"></i> </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="/secret">secret</a></li>  
+                        {{#if title}}
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" style="color:#fff;" >{{title}}</a>
+                          <ul class="dropdown-menu" style="background:#1e272e;">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/api/users/update/userpassword">Change Password</a></li>
+                            <li><a class="dropdown-item" href="/api/auth/logout">Sign Out</a></li>
+                          </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/secret">Cart</a></li>  
+                        <li class="nav-item"><a class="nav-link" href="/secret">Like</a></li>  
+                        <li class="nav-item"><a class="nav-link" href="/secret">Products</a></li>  
+                        {{else}}
+                        <li class="nav-item">
+                            <a class="nav-link" href="/api/auth/register">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/api/auth/login">Login</a>
+                        </li>
+                        <li><a class="nav-link" href="#">Products</a></li>
+                        {{/if}}     
+                    </ul>
+                                    <form class="d-flex">
+        <input class="form-control me-2 my-3" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success btn-sm py-0" type="submit">Search</button>
+      </form>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div> -->

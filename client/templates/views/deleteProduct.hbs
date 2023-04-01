@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>header}}
+    <title>Create Products</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+</head>
+
+<body>
+    {{>navbar title=username}}
+    <div class="container">
+            <h1>Create Products</h1>
+        <form class="row g-1" action="/api/products/delete" method="DELETE">
+            <div class="col-md-12 mb-12">
+                <label for="product_id" class="form-label">Product ID</label>
+                <input type="text" placeholder="Enter Product Name" class="form-control" id="product_id" value="" name="_id">
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit" id="submitbtn">Submit form</button>
+            </div>
+        </form>
+    </div>
+
+
+    <script src="/js/deleteProduct.js"></script>
+</body>
+
+</html>

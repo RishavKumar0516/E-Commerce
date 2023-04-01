@@ -1,0 +1,107 @@
+<! DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ecommerce app</title>
+    {{>header}}
+    <link type="text/css" rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    {{>navbar title=username}}
+    <!-- main header -->
+    <div class="container_big">   
+        <div class="precontainer">
+            <div class="leftcontainer">
+                <div class="admtext">
+                    {{#if username}}
+                    <h3>Hi {{username}}</h3>
+                    {{else}}
+                    <h3>Hi Admin</h3>
+                    {{/if}}
+                    <h1>Edit Your Ecommerce here...</h1>
+                    <p>Welcome you in your <span>Administration page</span> You can modify your page As you want!</p>
+                    <p> To visit user page <i class="fa-solid fa-arrow-right"></i> <button class="button">Click here</button></p>
+                </div>
+            </div>
+            <div class="rightcontainers">
+                <div class="image-containers">
+                    <img src="/img/use121.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- containers to show some information -->
+    <section class="headers">
+        <h2>Services Information</h2>
+    </section>
+    <div class="infocontainer">
+        <div class="flex">
+            <div class="items">
+                <i class="fa-solid fa-eye fa-3x"></i>
+                <h3>20</h3>
+                <p>Number of Orders</p>
+            </div>
+            <div class="items">
+                <i class="fa-sharp fa-solid fa-people-group fa-3x"></i>
+                <h3>04</h3>
+                <p>Number of visiters</p>
+            </div>
+            <div class="items">
+                <i class="fa-solid fa-store fa-3x"></i>
+                <h3>140</h3>
+                <p>Number of products</p>
+            </div>
+        </div>
+    </div>
+    <section class="headers">
+        <h2>To perform any changes please click here
+            <button class="button" id="btn"><i class="fa-solid fa-arrow-turn-down"></i></button>
+        </h2>
+    </section>
+    <!-- to perform changes -->
+    <div class="infocontainer" id="showoptions">
+        <div class="grids">
+            <div class="griditems">
+                <a href="/api/products/create">Create product <i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+            <div class="griditems">
+                <a href="/api/products/delete">Remove product <i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+            <div class="griditems">
+                <a href="/api/products/adminproducts">Update Product <i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+            <div class="griditems">
+                <a href="/api/products/adminproducts">Show product <i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+            <div class="griditems">
+                <a href="/api/users/usersinfo">View all User <i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footers">
+        <p>The @copyrights of website belongs to <span>Allen Parker</span></p>
+    </div>
+    <script>    
+    let showOption = document.getElementById('showoptions');
+    let btn = document.getElementById('btn');
+
+    btn.onclick = function() {
+        if (showOption.style.display === "inline-block") {
+            showOption.style.display = "none";
+        } else {
+            showOption.style.display = "inline-block";
+        }
+    }
+    </script>
+</body>
+
+<!-- 
+ {{#if details.username}}
+                    <h3>Hi {{details.username}}</h3>
+                    {{else}}
+                    <h3>Hi Admin</h3>
+                    {{/if}} -->
+
+</html>

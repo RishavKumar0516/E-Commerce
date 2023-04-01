@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">  
+
+<head>         
+     <meta charset="UTF-8">    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allen Parker pvt.Ltd</title>
+    <!-- navbar -->
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <!-- style css link -->
+    <link rel="stylesheet" href="/user/css/style.css">
+    <!-- style responsiveness link -->
+    <link rel="stylesheet" href="/user/css/phone.css">
+    <!-- font awesome icon link -->
+    <script src="https://use.fontawesome.com/c99ec6a45d.js"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- animate.css animation cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- aos animation -->
+    <link rel="stylesheet" href="aos-animation/aos.css">
+    <!-- these is the css Aos CDN link which helps to perform scroll animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>  
+
+<body>
+<!--onresize="myFunction()"   this is present inside body opening tag-->
+
+<!-- -------------------website part start------------------------- -->
+
+
+    <!-- creating navigation bar -->
+    {{>usernavbar title=username}}
+
+            <!-- ----------------------section-2------------------ -->
+    <div class="offer-section">
+        <p>Sale Up To 50% Biggest Discounts. Hurry! Limited Perriod Offer <a href="#">Shop Now</a></p>
+    </div>
+
+            <!-- ------------------------section-3----------------------------- -->
+
+    <div class="header">
+
+        <div class="slide-container">
+
+            <div class="slider active">                <!-- 1 -->
+                <img src="/user/img/one.jpg" alt="">
+                <div class="content left">
+                    <h3>Fashion Sale</h3>
+                    <h1 class="animate__bounceIn">Minimal Menz Style</h1>
+                    <p class="animate__fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor
+                        incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <span class="btn">SHOP NOW</span>
+                </div>
+            </div>
+
+            <div class="slider">                <!-- 2 -->
+                <img src="/user/img/two.jpg" alt="">
+                <div class="content right">
+                    <h3>Fashion Sale</h3>
+                    <h1 class="animate__bounceIn">Minimal Menz Style</h1>
+                    <p class="animate__fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor
+                        incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <span class="btn animate__fadeInRightBig" style="animation-name:fadeInRightBig ;">SHOP NOW</span>
+                </div>
+            </div>
+
+            <div class="slider">                <!-- 3 -->
+                <img src="/user/img/three.jpg" alt="">
+                <div class="content left">
+                    <h3>Fashion Sale</h3>
+                    <h1 class="animate__bounceIn">Minimal Menz Style</h1>
+                    <p class="animate__fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor
+                        incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <span class="btn">SHOP NOW</span>
+                </div>
+            </div>
+
+            <div class="slider">                <!-- 4 -->
+                <img src="/user/img/four.jpg" alt="">
+                <div class="content left">
+                    <h3>Fashion Sale</h3>
+                    <h1 class="animate__bounceIn">Minimal Menz Style</h1>
+                    <p class="animate__fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor
+                        incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <span class="btn">SHOP NOW</span>
+                </div>
+            </div>
+
+            <div class="slider">                <!-- 5 -->
+                <img src="/user/img/five.jpg" alt="">
+                <div class="content right">
+                    <h3>Fashion Sale</h3>
+                    <h1 class="animate__bounceIn">Minimal Menz Style</h1>
+                    <p class="animate__fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor
+                        incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <span class="btn animate__fadeInRightBig" style="animation-name:fadeInRightBig ;">SHOP NOW</span>
+                </div>
+            </div>
+
+            <div class="slider">                <!-- 6 -->
+                <img src="/user/img/six.jpg" alt="">
+                <div class="content left">
+                    <h3>Fashion Sale</h3>
+                    <h1 class="animate__bounceIn">Minimal Menz Style</h1>
+                    <p class="animate__fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor
+                        incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <span class="btn">SHOP NOW</span>
+                </div>
+            </div>
+
+            <!-- setting the previous and next buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div class="nav">
+                <div class="button active" onclick="currentslide(1)"></div>
+                <div class="button" onclick="currentslide(2)"></div>
+                <div class="button" onclick="currentslide(3)"></div>
+                <div class="button" onclick="currentslide(4)"></div>
+                <div class="button" onclick="currentslide(5)"></div>
+                <div class="button" onclick="currentslide(6)"></div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <!-- ---------------------------section-4 start---------------------------- -->
+
+    <div class="section">
+
+        <div data-aos="fade-down" data-aos-delay="50" class="boxes">
+                <img src="/user/img/bag.png" alt="">
+            <h4>Money Back Gurantee</h4>
+            <p>Shall open divide a one</p>
+        </div>
+
+        <div data-aos="fade-down" data-aos-delay="200" class="boxes">
+                <img src="/user/img/k.png" alt="">
+            <h4>free delivery</h4>
+            <p>Shall open divide a one</p>
+        </div>
+
+        <div data-aos="fade-down" data-aos-delay="350" class="boxes">
+                <img src="/user/img/m.png" alt="">
+            <h4>always support</h4>
+            <p>Shall open divide a one</p>
+        </div>
+
+        <div data-aos="fade-down" data-aos-delay="500" class="boxes">
+                <img src="/user/img/b.png" alt="">
+            <h4>secure payment</h4>
+            <p>Shall open divide a one</p>
+        </div>
+
+    </div>
+    <!-- ---------------------------section-4 end---------------------------- -->
+
+    <!-------------------- features product section-5 start ---------------------->
+
+    <div class="product">
+          <h2  data-aos="zoom-in"  class="heading">featured product</h2>
+          <p class="paragraph" data-aos="fade-right" data-aos-offset="300"data-aos-easing="ease-in-sine">
+              Bring called seed first of third give itself now ment</p>
+
+          <div class="Product-container" id="Product-containers"><!--these contains 3 product  -->
+
+              
+               <!-- featured products -->
+
+          </div>
+
+    </div>
+
+<!-------------------- features product section-5 end ---------------------->
+
+<!------------ banner section section-6 start ------------->
+    <div class="banner-section">
+        <img src="/user/img/banner3.jpg" alt="">
+        <div class="banner-content ">
+            <p>All mens collection</p>
+            <h1>50% off</h1>
+            <a href="#" class="discover-button">Discover Now</a>
+            <span class="time">Limited Time Offer</span>
+        </div>
+    </div>
+<!------------ banner section section-6 end ------------->
+
+<!-------------------- new product section-7 start--------------------------->
+
+<div class="newproduct">
+    <h2 data-aos="zoom-in" class="heading">new product</h2>
+    <p class="paragraph" data-aos="fade-right" data-aos-offset="300"data-aos-easing="ease-in-sine" >Bring called seed first of third give itself now ment</p>
+
+    <div class="newroduct-container">
+
+        <div class="left-container"  data-aos="zoom-in" data-aos-duration="1500"><!-- left box -->
+            <img src="/user/img/left1.png" alt="">
+            <div class="left-content">
+                <p>collection of 2021</p>
+                <h1>men's summer t-shirts</h1>
+                <span id="dollar">120.70</span>
+                <a href="#" class="discover-button">add to cart</a>
+            </div>
+        </div>
+
+
+        <div class="right-container"  data-aos="zoom-out" data-aos-duration="1500">
+            
+           <!-- new product here -->
+            
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-------------------- new product section-7 End--------------------------->
+
+<!-- banner 2 section-8 start -->
+
+<div class="banner-2">
+    <div class="banner-poster">
+        
+        <div class="poster-content">
+           <p class="limited"> Limited Offer 20% OFF</p>
+           <h1>Week Deal</h1>
+           <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+           incididunt ut labore et dolore magna aliqua. a. 
+           </p>
+           <a href="#" class="discover-button color">Discover Now</a>
+        </div>
+
+    </div>
+</div>
+
+<!-- banner 2 section-8 end -->
+
+<!-- inspired products section-9 start -->
+
+<div class="inspird">
+    <h2 data-aos="zoom-in" class="heading">inspired products</h2>
+    <p class="paragraph" data-aos="fade-right" data-aos-offset="300"data-aos-easing="ease-in-sine" >Bring called seed first of third give itself now ment</p>
+    <div class="inspird-box">
+
+
+        <!-- inspired product here -->
+
+
+    </div>
+</div>
+
+<!-- inspired products section-9 end -->
+
+ <!-- ------------------footer section-10 start---------------------- -->
+
+ <div class="footer">
+     <div class="footer-box">
+
+         <div class="about-us footer-item">
+             <h3 data-aos="fade-left" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000">About Us</h3>
+             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+             incididunt ut labore et dolore magna aliqua.
+             </p>
+         </div>
+
+         <div class="newsletter footer-item">
+            <h3 data-aos="fade-left" data-aos-offset="100" data-aos-delay="100" data-aos-duration="1000">Newsletter</h3>
+            <p>Stay update with our latest</p>
+            <form action="">
+                <input type="text" placeholder="Email address" name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+         </div>
+
+         <div class="intagram footer-item">
+            <h3 data-aos="fade-left" data-aos-offset="100" data-aos-delay="150" data-aos-duration="1000">Instagram Feed</h3>
+            <div class="insta">
+
+                <img src="/user/img/baby.jpg" width="87" alt="">
+                <img src="/user/img/dog.jpg" width="87" alt="">
+                <img src="/user/img/lady.jpg" width="87" alt="">
+
+            </div>
+         </div>
+
+         <div class="follow footer-item">
+            <h3 data-aos="fade-left" data-aos-offset="100" data-aos-delay="200" data-aos-duration="1000">Follow Us</h3>
+            <p>Let us be social</p>
+            <div class="links">
+                <a href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="mailto:merishavkumar@gmail.com?Subject=Reaching%20Out&body=How%20you"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+            </div>
+         </div>
+
+     </div>
+     <p style="color:#f0f0f0; margin-top:20px;">Copyright &copy 2021 All right reserved By Allen parker.</p>
+
+
+ </div>
+
+
+ <!-- ------------------footer section-10 ends---------------------- -->
+
+
+
+
+
+    <!-- these is J-Query CDN having no any relation with the scroll animation . these is used when j-Query code is written -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <!-- these is the downloadable javascript file of the aos scroll animation -->
+    <script src="aos-animation/aos.js"></script>
+
+    <!-- these is the  Aos javascript CDN link which helps to perform scroll animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
+    <!-- java code for navigation -->
+    <script>
+        // console.log(window.innerWidth);
+        // console.log(window.innerHeight);
+        let menu = document.querySelector('.menu-toggle');
+        menu.addEventListener('click', open);
+
+        function open() {
+            menu.classList.toggle("active");
+            let navbar = document.querySelector(".navbar");
+            navbar.classList.toggle("active");
+        }
+/* javascript for slider */
+        let slideIndex = 1;
+
+        function plusSlides(n) {
+            slideShow(slideIndex += n);
+        }
+        function currentslide(n) {
+            slideShow(slideIndex = n);
+        }
+
+        function slideShow(index) {
+            let slide = document.querySelectorAll(".slider");
+            let buttons = document.querySelectorAll(".button");
+
+            if (index > slide.length) {
+                slideIndex = 1;
+
+            }
+            if (index < 1) {
+                slideIndex = slide.length;
+            }
+
+            slide.forEach(element => {
+                element.classList.remove("active");
+            });
+
+            buttons.forEach(element => {
+                element.classList.remove("active");
+            });
+
+            slide[slideIndex - 1].classList.add("active");
+            buttons[slideIndex - 1].classList.add("active");
+        }
+
+
+    </script>
+    
+<!-- java script for banner-2 -->
+     <script>
+        let poster =  document.querySelector(".banner-poster");
+        let array =new Array("/user/img/Untitled.jpg",
+        "/user/img/3we.jpg",
+        "/user/img/banner1.jpg",
+        "/user/img/banner2.jpg",
+        "/user/img/banner4.jpg",
+        "/user/img/banner5.jpg",
+        "/user/img/guys.jpg");
+        let i=0;
+        function image(){
+
+            // poster.style.backgroundImage = "url('img/3we.jpg')";
+            poster.style.backgroundImage = "url(" + array[i] + ")";
+            if (i < array.length - 1) {
+                   i++;
+            } else {
+                  i = 0;
+            }
+        }
+        setInterval(image, 5000);
+     </script>
+
+
+<!-- animation on scroll -->
+
+    <script>
+        AOS.init({
+            offset: 200,  // offset (in px) from the original trigger point
+            duration: 2000,
+            delay: 100, // values from 0 to 3000, with step 50ms
+            duration: 400, // values from 0 to 3000, with step 50ms
+            easing: 'ease-in-out', // default easing for AOS animations
+            once: false, // whether animation should happen only once - while scrolling down
+            mirror: false, // whether elements should animate out while scrolling past them
+            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation          
+        });
+    </script>
+
+    <!-- <script src="/user/js/script.js"></script> -->
+    <script src="/user/jscript/show_products.js"></script>
+    <script src="/user/jscript/addTocartandLike.js"></script>
+
+</body>
+
+</html>

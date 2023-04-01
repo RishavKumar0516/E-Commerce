@@ -1,0 +1,47 @@
+        @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;700&family=Montserrat:ital,wght@0,300;0,700;1,500&display=swap');
+
+/*             font-family: 'Barlow Condensed', sans-serif;
+            font-family: 'Montserrat', sans-serif; */
+
+        .container{
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            border: 3px solid black;
+            border-radius: 8px;
+            padding: 20px 30px;
+
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        label{
+             font-family: 'Montserrat', sans-serif;
+             color: black;
+             font-weight: 700;
+             font-size: 1rem;
+             margin-bottom: 5px;
+        }
+        #submitbtn {
+          margin-top: 2em;
+          font-size: 1rem;
+          font-weight: 700;
+          line-height: 1.5;
+          letter-spacing: 0.2px;
+          padding: 4px 6px;
+          border-radius: 9px;
+          box-shadow: 0px 0px 0px 1px black;
+          outline: none;
+        }
+        input[type=text]{
+            font-weight: 700;
+            padding: 4px 6px;
+            font-size: 1rem;
+            background-repeat:repeat-x; 
+            border: 2px solid black;
+            height:25px;
+
+        }

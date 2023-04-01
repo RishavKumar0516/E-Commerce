@@ -1,0 +1,523 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/*@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:wght@100;300;400;500;900&display=swap');
+/* VARIABLE CSS */
+
+:root {
+--header-height: 3rem;
+
+/* change favourite color */
+--hue-color: 250 ;/* Purple 250 - Green 142 - Blue 230 - Pink 340 */
+
+/* HSL color mode */
+--first-color: hsl(var(--hue-color), 69%, 61%);
+--first-color-second: hsl(var(--hue-color), 69%, 61%);
+--first-color-alt: hsl(var(--hue-color), 57%, 53%);
+--first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+--title-color: hsl(var(--hue-color), 8%, 15%);
+--text-color: hsl(var(--hue-color), 8%, 45%);
+--text-color-lighter: hsl(var(--hue-color), 8%, 65%);
+--input-color: hsl(var(--hue-color), 70%, 96%);
+--body-color: hsl(var(--hue-color), 60%, 99%);
+--container-color: #fff;
+
+
+/* Font and Typography */
+--body-font: 'Poppins', sans-serif;/* 'Poppins', sans-serif*/
+
+/* .5rem = 8px, 1rem = 16px, 1.5rem = 24px... */
+--big-font-size: 2rem;
+--h1-font-size: 1.5rem;
+--h2-font-size: 1.25rem;
+--h3-font-size: 1.125rem;
+--normal-font-size: .938rem;
+--small-font-size: .813rem;
+--smaller-font-size: .75rem;
+
+/* font weight */
+--font-medium:500;
+--font-semi-bold:600;
+
+/* Margeness Bottom */
+/*   .25rem = 4px, .5rem = 8px, .75rem = 12px...   */
+--mb-0-25: .25rem;
+--mb-0-5: .5rem;
+--mb-0-75: .75rem;
+--mb-1: 1rem;
+--mb-0-1: .1rem;
+--mb-1-5: 1.5rem;
+--mb-2: 2rem;
+--mb-2-5: 2.5rem;
+--mb-3: 3rem;
+
+
+/*   z-index */
+--z--tooltip: 10;
+--z--fixed: 100;
+--z--modal: 1000;
+
+}
+
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+    :root{
+        --big-font-size: 3rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+
+    }
+}
+
+/* Variables dark theme */
+
+/* Button Dark theme */
+
+/* Base */
+*{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0 0 var(--header-height) 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+        background:white;
+    color: var(--text-color);
+}
+
+
+/*  color  */
+.grey{
+    color: #878787;
+}
+.green{
+    color: #26a541;
+}
+.white{
+    color: #fff;
+}
+.blue{
+    background: darkcyan;
+}
+.c-blue{
+    color: darkcyan;
+}
+
+h1,h2,h3,h4{
+    color: var(--title-color);
+    font-weight:var(--font-semi-bold);
+}
+
+.black{
+    font-size: .88rem ;
+    color: var(--title-color);
+    font-weight: 500;
+}
+
+.s-black{
+    font-size: .90rem;
+    color: var(--title-color);
+}
+
+.comment-color{
+    color: var(--title-color);
+    font-weight:var(--font-medium);
+}
+
+a{
+    text-decoration:none;
+}
+.flexBox{
+	display:  flex;
+	flex-direction: row;
+
+}
+.flexBoxCol{
+		display:  flex;
+	flex-direction: column;
+	margin-bottom: 0;
+}
+.distance{
+    margin-left: var(--mb-1);
+    clear: both;
+}
+.mg-b{
+	margin-bottom: var(--mb-0-5);
+}
+.mg-l{
+    margin-left: var(--mb-3);
+}
+.mg-s-r{
+    margin-right: var(--mb-0-5);
+}
+.mg-s-l{
+    margin-left: var(--mb-0-75);
+}
+.mg-r{
+    margin-right: 4rem;
+}
+.mg-t{
+   margin-top: var(--mb-2-5); 
+}
+.a2345{
+    margin-left:var(--mb-0-5);
+}
+.mg-s-t{
+    margin-top: 0.5rem;
+}
+.mg-s2-t{
+    margin-top: 1.3rem;
+}
+.Inline{
+	display: inline;
+}
+.Inline-block{
+	display: inline-block;
+}
+.combine2{
+    width: 100%;
+    display: inline-block;
+    letter-spacing: 0;
+    margin-bottom: var(--mb-0-5);
+}
+.fa-tag{
+    margin-right: var(--mb-0-5);
+}
+.clear{
+    clear: both;
+}
+
+/* variable defination end */
+
+/* ----------product container------------- */
+
+.pro-container{
+	margin: 0;
+	padding : 0;
+	/*background-color: grey;*/
+}
+.pro-container2{
+	box-sizing: border-box;
+	padding: 0 20px 0;
+	margin-top: 10px;
+	/*background: #f2f9f5;*/
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+/* ----------product 1 container------------- */
+.product1{
+	width: 39%;
+    height:630px;/* this is aaded later, remove this when removing position sticky */
+	display:flex;
+    flex-direction:column;
+    clear:both;
+    position:sticky;
+    /*top:90px;*/
+    top: 0px;
+}
+.product2{
+	width: 60%;
+}
+.item{
+    /*border: 5px solid darkcyan;*/
+    box-sizing: border-box;
+}
+.image-container{
+    display: flex;
+    flex-direction: row;
+    clear: both;
+    justify-content: space-between;
+
+}
+.image-container .secondary{
+    width:14%;
+    display:flex;
+    flex-direction:column;
+    clear:both;
+    /*border: 1px solid blue;*/
+}
+.small-image{
+    display: block;
+    width: 96%;
+    height: 82px;
+    /*border: 2px solid red;*/
+}
+.active{
+    border: 2px solid darkcyan;
+}
+.secondary img{
+	box-sizing: border-box;
+	padding: 6px 4px; 
+      display: block;
+      margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: 82px;
+
+    /*border: 2px solid darkcyan;*/
+    transition:.1s ease-in-out;
+    clear:both;
+   
+}
+.secondary .small-image:hover{
+    border:3px solid  darkcyan;
+
+}
+.mini-container{
+	box-sizing: border-box;
+	width: 85%;
+    height: 550px;
+	border: 2px solid red;
+	position: relative;
+}
+
+.product-image{
+          position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 100%;
+        height: 550px;
+    transition: opacity .5s linear;
+    opacity: 1;
+    margin: auto;
+    z-index: 0;
+}
+.heart2{
+    width:45px;
+    height:45px;
+    line-height: 45px;
+    border-radius:30px;
+    box-shadow: 0 1px 4px 0 rgb(0 0 0 / 10%);
+    background-color: darkcyan;
+    color: #fff;
+    text-align: center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    right:15px;
+    top:15px;
+    z-index: 3;
+}
+
+.addto{
+    display:flex;
+    justify-content:space-between;
+    flex-direction: row;
+    margin-top:10px;
+    clear:both;
+}
+.buynow{
+    width:49%;
+    height:50px;
+    background:yellow;
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+    border-radius:2px;
+    text-decoration:uppercase;
+    color:white;
+    background: #fb641b;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
+    clear:both;
+}
+.addto .buynow object{
+    margin:5px;
+    clear:both;
+    width: 19px;
+    height:19px;
+}
+.colo{
+
+    background: #ff9f00;
+    clear:both;
+}
+
+
+/*   -------------------  product2  start----------------------- */
+.product2{
+	padding-top:var(--mb-1-5);
+	padding-left: var(--mb-0-5);
+}
+.product-name{
+	display: inline-block;
+    margin-bottom: var(--mb-0-5);
+}
+.brand{
+    text-transform: uppercase;
+}
+.productname{
+	font-size:var(--h2-font-size);
+	font-weight: var(--font-medium);
+	line-height: 30px;
+}
+.combine{
+	display: inline;
+    letter-spacing: 0;
+    margin-right: 20px;
+}
+.symbol{
+   margin: 0;
+   padding: 0;
+}
+.price2{
+    position: relative;
+}
+.price2::after{
+    content:"";
+    height:2px;
+    width:63px;
+    background:rgb(133, 141, 150);
+    position:absolute;
+    left:0;
+    top:11px;
+}
+.circle{
+    display: inline-block;
+    width:24px;
+    height:24px;
+    line-height: normal;
+    border-radius:24px;
+    text-align:center;
+    color:rgb(133, 141, 150);
+    box-shadow:0px 0px 1px 1px #D0D6D6;
+    margin-left: 10px;
+}
+.lheight{
+        padding: 5px 0px 0 0;
+}
+.rating-review{
+    margin: var(--mb-1) 0px;
+}
+.offerbox{
+  width:40px;
+  height:20px;
+    background-color: #26a541;
+    padding:5px 9px;
+    color:#fff;
+    border-radius:20px;
+    letter-spacing:0px;
+}
+.offerbox2{
+  width:30px;
+  height:20px;
+    background-color: darkcyan;
+    padding:1px 5px;
+    color:#fff;
+    border-radius:20px;
+    letter-spacing:0px;
+}
+.list{
+    width: 100%;
+}
+.list .combine2 li{
+    margin-bottom: var(--mb-0-75);
+    list-style-position: outside;
+}
+.combine li p{
+    letter-spacing: normal;
+    line-height: 10px;
+}
+.deliverto{
+    padding: 35px 20px 10px 0px;
+    clear: both;
+}
+.right-side{
+    float: right;
+}
+.inputlocation{
+    display: inline-block;
+    margin-top: 25px;
+    position: relative;
+        
+}
+.input-location{
+    outline: none;
+    width: 160px;
+    box-shadow: none;
+    display: inline-block;
+    line-height: 25px;
+    border: none;
+    font-size: 14px;
+    padding: 0 0 6px;
+    font-weight: 500;
+}
+.inputlocation::after{
+    content:"";
+    height:4px;
+    width:210px;
+    background:darkcyan;
+    position:absolute;
+    left:0;
+    top:30px;
+}
+.days{
+   margin-top: var(--mb-3);
+}
+.top{
+    line-height: 15px;
+}
+.flexBox2{
+    display: inline-block;
+}
+.boxsizes{
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 7px;
+    width: 54px;
+    height: 43px;
+    line-height: 23px;
+    text-align: center;
+    border: 3px solid #f0f0f0;
+    border-radius: 3px;
+    margin-right: var(--mb-0-75);
+    cursor: pointer;
+}
+.boxsizes.active{
+    border: 2px solid darkcyan;
+}
+.normal{
+    text-align: center;
+    line-height: 40px;
+}
+.seller{
+    margin-right: 2.7rem;
+}
+.productdetail{
+    padding: 25px 40px 25px 20px;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    clear: both;
+}
+.ratingandreview{
+    padding: 25px 20px;
+}
+.rate-product{
+    background: darkcyan;
+    color:#fff;
+    padding:8px 10px;
+    border-radius:2px;
+    letter-spacing: 0;
+    margin-right:20px;
+}
+
+
+/* ----------product 2 end------------- */
+

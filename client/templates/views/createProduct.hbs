@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>header}}
+    <title>Create Products</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+</head>
+
+<body>
+    {{>navbar title=username}}
+    <div class="container">
+        <h1>Create Products</h1>
+        <form class="row g-1" action="/api/products/create" method="POST" id="log-form">
+            <div class="col-md-6 mb-4">
+                <label for="product_name" class="form-label">Product Name</label>
+                <input type="text" placeholder="Enter Product Name" class="form-control" id="name" value="" name="name">
+            </div>
+            <div class="col-md-6 mb-4">
+                <label for="category" class="form-label">Product Category</label>
+                <input type="text" placeholder="Enter Product Category" class="form-control" id="category" value="" name="category">
+            </div>
+            <div class="col-md-12 mb-4">
+                <label for="subcategory" class="form-label">Product Sub-Category</label>
+                <input type="text" placeholder="Enter Product Sub-Category" class="form-control" id="subcategory" value="" name="subcategory">
+            </div>
+            <div class="col-md-12 mb-4">
+                <label for="product_title" class="form-label">Product title</label>
+                <input type="text" placeholder="Enter Product Title" class="form-control" id="product_title" value="" name="title">
+            </div>
+            <div class="col-md-6 mb-4">
+                <label for="images" class="form-label">Image Link 1</label>
+                <input type="text" placeholder="Enter link of First Image" class="form-control images" value="" name="image">
+            </div>
+            <div class="col-md-6 mb-4">
+                <label for="images" class="form-label">Image Link 2</label>
+                <input type="text" placeholder="Enter link of Second Image" class="form-control images" value="" name="image">
+            </div>
+            <div class="col-md-6 mb-4">
+                <label for="images" class="form-label">Image Link 3</label>
+                <input type="text" placeholder="Enter link of Third Image" class="form-control images" value="" name="image">
+            </div>
+            <div class="col-md-6 mb-4">
+                <label for="images" class="form-label">Image Link 4</label>
+                <input type="text" placeholder="Enter link of Forth Image" class="form-control images" value="" name="image">
+            </div>
+            <div class="col-md-6 mb-4">
+                <label for="form-check" class="form-label">Featured</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="featured" id="flexRadioDefault1" value="true">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        True
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="featured" id="flexRadioDefault2" value="false" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        False
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <label for="form-check" class="form-label">Inspired</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="inspired" id="flexRadioDefault1" value="true">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        True
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="inspired" id="flexRadioDefault2" value="false" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        False
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <label for="form-check" class="form-label">New</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="new" id="flexRadioDefault1" value="true">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        True
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="new" id="flexRadioDefault2" value="false" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        False
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <label for="description" class="form-label">Description</label>
+                <input type="text"  placeholder="Enter Description of Product" class="form-control" id="description" value="" name="description">
+            </div>
+            <div class="col-md-6 mb-4">
+                <label for="price" class="form-label">Price</label>
+                <input type="text" placeholder="Enter price of Product" class="form-control" id="price" value="" name="price">
+            </div>
+            <div class="col-md-6 mb-4">
+                <label for="discountPercent" class="form-label">discount Percent</label>
+                <input type="text" placeholder="Enter discount percentage on Product" class="form-control" id="discountPercent" value="" name="discountPercent">
+            </div>
+            <div class="col-md-6 mb-4">
+                <label for="discountPrice" class="form-label">discount Price</label>
+                <input type="text" placeholder="Enter discount on Product" class="form-control" id="discountPrice" value="" name="discountPrice">
+            </div>
+            <div class="col-md-6 mb-4">
+                <label for="countInStock" class="form-label">countInStock</label>
+                <input type="text" placeholder="Enter total number of Product" class="form-control" id="countInStock" value="" name="countInStock">
+            </div>
+            <div class="col-md-6 col-lg-12">
+                <button class="btn btn-primary" type="submit" id="submitbtn">Submit</button>
+                <a href="/api/auth/user/adminpage" class="btn btn-primary">Back to Home Page</a>
+            </div>
+        </form>
+    </div> 
+    <script src="/js/createProduct.js"></script>
+</body>
+
+</html>

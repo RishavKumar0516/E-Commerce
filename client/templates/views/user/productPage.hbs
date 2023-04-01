@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">  
+
+<head>         
+     <meta charset="UTF-8">    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allen Parker pvt.Ltd</title>
+    <!-- navbar -->
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <!-- style css link -->
+    <link rel="stylesheet" href="/user/css/style.css">
+    <!-- style responsiveness link -->
+    <link rel="stylesheet" href="/user/css/phone.css">
+    <!-- font awesome icon link -->
+    <script src="https://use.fontawesome.com/c99ec6a45d.js"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- animate.css animation cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- aos animation -->
+    <link rel="stylesheet" href="aos-animation/aos.css">
+    <!-- these is the css Aos CDN link which helps to perform scroll animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>  
+
+<body>
+
+    <!-- creating navigation bar -->
+    {{>usernavbar title=username}}
+
+            <!-- ----------------------section-2------------------ -->
+    <div class="offer-section">
+        <p>Sale Up To 50% Biggest Discounts. Hurry! Limited Perriod Offer <a href="#">Shop Now</a></p>
+    </div>
+
+    <!-------------------- features product section-5 start ---------------------->
+
+    <div class="product">
+
+          <div class="Product-container" id="Product-containers"><!--these contains 3 product  -->
+
+              
+               <!-- featured products -->
+
+          </div>
+
+    </div>
+
+<!-------------------- features product section-5 end ---------------------->
+
+
+
+ <!-- ------------------footer section-10 start---------------------- -->
+
+ <div class="footer">
+     <div class="footer-box">
+
+         <div class="about-us footer-item">
+             <h3 data-aos="fade-left" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000">About Us</h3>
+             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+             incididunt ut labore et dolore magna aliqua.
+             </p>
+         </div>
+
+         <div class="newsletter footer-item">
+            <h3 data-aos="fade-left" data-aos-offset="100" data-aos-delay="100" data-aos-duration="1000">Newsletter</h3>
+            <p>Stay update with our latest</p>
+            <form action="">
+                <input type="text" placeholder="Email address" name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+         </div>
+
+         <div class="intagram footer-item">
+            <h3 data-aos="fade-left" data-aos-offset="100" data-aos-delay="150" data-aos-duration="1000">Instagram Feed</h3>
+            <div class="insta">
+
+                <img src="/user/img/baby.jpg" width="87" alt="">
+                <img src="/user/img/dog.jpg" width="87" alt="">
+                <img src="/user/img/lady.jpg" width="87" alt="">
+
+            </div>
+         </div>
+
+         <div class="follow footer-item">
+            <h3 data-aos="fade-left" data-aos-offset="100" data-aos-delay="200" data-aos-duration="1000">Follow Us</h3>
+            <p>Let us be social</p>
+            <div class="links">
+                <a href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="mailto:merishavkumar@gmail.com?Subject=Reaching%20Out&body=How%20you"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+            </div>
+         </div>
+
+     </div>
+     <p style="color:#f0f0f0; margin-top:20px;">Copyright &copy 2021 All right reserved By Allen parker.</p>
+
+
+ </div>
+
+
+ <!-- ------------------footer section-10 ends---------------------- -->
+
+
+
+
+
+    <!-- these is J-Query CDN having no any relation with the scroll animation . these is used when j-Query code is written -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <!-- these is the downloadable javascript file of the aos scroll animation -->
+    <script src="aos-animation/aos.js"></script>
+
+    <!-- these is the  Aos javascript CDN link which helps to perform scroll animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    
+
+
+
+<!-- animation on scroll -->
+
+    <script>
+        AOS.init({
+            offset: 200,  // offset (in px) from the original trigger point
+            duration: 2000,
+            delay: 100, // values from 0 to 3000, with step 50ms
+            duration: 400, // values from 0 to 3000, with step 50ms
+            easing: 'ease-in-out', // default easing for AOS animations
+            once: false, // whether animation should happen only once - while scrolling down
+            mirror: false, // whether elements should animate out while scrolling past them
+            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation          
+        });
+    </script>
+
+    <!-- <script src="/user/js/script.js"></script> -->
+    <script src="/user/jscript/products.js"></script>
+    <script src="/user/jscript/addTocartandLike.js"></script>
+
+</body>
+
+</html>

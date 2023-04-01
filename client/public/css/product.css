@@ -1,0 +1,218 @@
+.container-box{
+	margin: 20px 30px;
+}
+/* .container{
+	/* display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+    flex-wrap: wrap; 
+     margin-top:60px;
+    display:grid;
+    grid-template-rows:repeat(1,520px);
+    grid-template-columns:repeat(auto-fit,minmax(343px, 343px));
+    grid-gap:2em;
+    justify-content:center;
+    overflow:hidden;
+} */
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* products page css */
+/* .product-box{
+    box-shadow:0 0 2px 0 #e0e0e0;
+    width: 300px;
+    
+}
+.linktoproduct{
+    cursor: pointer;
+}
+.robert{
+    pointer-events: none;
+}
+.product-box .product-img{
+    position:relative;
+    height:410px;
+    background:#f0f0f0;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    
+}
+.product-box .product-img img{
+     position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 100%;
+    transition: opacity .5s linear;
+    opacity: 1;
+    margin: auto;
+    z-index: 0;
+}
+.product-box .product-img .showup{
+   position:absolute;
+   left:0;
+   bottom:-60px;
+   width:100%;
+   height:60px;
+   padding:0 20px;
+   background:#74e40b;
+   display:flex;
+   align-items:center;
+   justify-content:space-evenly;
+   transition:.5s;
+}
+.product-box:hover .product-img .showup{
+   bottom:0;
+   pointer-events: initial;
+}
+.product-box .product-img .showup i{
+    width:35px;
+    height:35px;
+    line-height:35px;
+    text-align:center;
+    border-radius:35px;
+    background:#fff;
+}
+.product-box .product-content{
+    position:relative;
+    padding:20px 25px;
+    text-align:left;
+    
+}
+.product-box .product-content h4{
+    font-size:.95em;
+    font-weight:450;
+    color:#3d3d3d;
+    transition:.5s;
+}
+.product-box:hover .product-content h4{
+    color:#74e40b;
+}
+.product-box .product-content div{
+    display:inline-block;
+}
+.product-box .product-content div h2{
+    display:inline;
+    font-size:1.3em;
+    letter-spacing:0;
+}
+.product-box .product-content div > span{
+     display:inline;
+     position:relative;
+     color:#b3b3b3;
+     margin-left:30px;
+}
+.product-box .product-content div > span::before{
+    content:"";
+    position:absolute;
+    top:50%;
+    left:0;
+    width:100%;
+    height:2px;
+    background-color:#b3b3b3;
+} */
+
+
+.product-box2{
+    position: relative;
+    width: 80%;
+    border: 2px solid black;
+    height: 90px;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    border-radius: 8px;
+    box-shadow: 0 0 2px 1px black;
+    clear: both;
+    margin-bottom: 3rem;
+}
+.product-box2 .image{
+    margin-left: 30px;
+        position: relative;
+    overflow: hidden;
+    height: 70px;
+    width: 70px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+/*     border: 1px solid orange; */
+}
+.product-box2 .image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.product-box2 .content{
+        margin-left: 8rem;
+        display:flex;
+    align-items:center;
+    justify-content: left;
+    flex-direction: row;
+/*     border: 1px solid green; */
+}
+
+.product-box2 .content .left{
+    display:flex;
+    justify-content: left;
+    align-items:left;
+    flex-direction: column;
+
+}
+
+.product-box2 .content .left .combine{
+    display:flex;
+    flex-direction: row;
+/*     border: 1px solid red; */
+}
+.product-box2 .content .left h4{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+/*  border: 1px solid grey; */
+}
+.combine .price, .combine .discount{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.combine .discount{
+    margin-left: 3rem;
+}
+.product-box2 .right{
+    position: absolute;
+    right: 3rem;
+    float: right;
+/*     border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.btn{
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 6px 10px;
+    background: #fff;
+        border-radius: 10px;
+        border: 2px solid black;
+        box-shadow: 0 0 1px 0px black;
+
+}
+
+.rmargin{
+    margin-right: 2rem;
+}

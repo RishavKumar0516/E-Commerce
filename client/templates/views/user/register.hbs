@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Weather app signup page</title>
+   {{>header}}
+   <link rel="stylesheet" href="/css/style3.css">
+   <style>
+     body{
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     }
+   </style>
+</head>
+<body>
+
+	<div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form action="/api/user/register" method="POST" id="reg-form">
+        <div class="user-details">
+          <div class="input-box" id="filluser">
+            <span class="details">Username</span>
+            <input type="text" placeholder="Enter your username" value="" name="username">
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" placeholder="Enter your email" value="" name="email">
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" placeholder="Enter your password" value="" name="password">
+          </div>
+        </div>
+        <div class="button">
+          <input type="Submit" class="btnRegister" value="register">
+        </div>
+      </form>
+
+      <p class="para-2">
+      Already have an Account? <a href="/api/auth/login">Login Here</a>
+    </p>
+    </div>
+  </div>
+
+
+<!-- <script>
+       const form = document.getElementById('reg-form');
+       form.addEventListener('submit', regUser);
+
+       function regUser(event){
+          event.preventDefault();
+       }
+     </script> -->
+
+	
+</body>
+</html>
