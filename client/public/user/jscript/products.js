@@ -2,7 +2,7 @@
 const getfeatured_products = async ()=>{
 	try{
 
-		let url = `http://localhost:8000/api/index/products?featured=true`;
+		let url = `http://localhost:8000/api/index/products`;
 		let response = await fetch(url);
 		let json = await response.json();
 		console.log(json);

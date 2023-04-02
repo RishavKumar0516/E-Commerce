@@ -53,10 +53,10 @@ const checkadminislogged = async (req, res, next)=>{
 		if(err) return next();
 		const detail = await User.findOne({_id:user.id});
 		if(detail.isAdmin){
-			res.render("index", {username:detail.username});
+			res.render("admin/index", {username:detail.username});
 		}
 		else{
-            res.redirect("/api/auth/login");
+            res.redirect("/api/admin/login");
 		}
 	})
 

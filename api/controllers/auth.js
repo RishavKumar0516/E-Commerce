@@ -27,7 +27,7 @@ try{
 	})
 
 	await newUser.save();
-	res.status(200).redirect("/api/auth/login");
+	res.status(200).redirect("/api/admin/login");
 
 }catch(err){
 	next(err);
@@ -64,7 +64,7 @@ const Login = async (req, res, next) => {
       })
       .status(200)
       //.json({ details: { ...otherDetails }, isAdmin });
-      .redirect("/api/auth/user/adminpage");
+      .redirect("/api/admin/adminpage");
       //.redirect("/api/auth/user/username/" + user.username);
       //render("index", { details: { ...otherDetails }, isAdmin });
   } catch (err) {

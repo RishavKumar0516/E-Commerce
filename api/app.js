@@ -16,6 +16,7 @@ const authRoute = require("./routes/auth");
 const productsRoute = require("./routes/products");
 const usersRoute = require("./routes/users");
 const usersPages = require("./routes/userpages");
+const adminPages = require("./routes/adminpage");
 
 
 const static_path = path.join(__dirname, "../client/public");
@@ -36,6 +37,7 @@ app.use("/api/auth", authRoute);
 app.use("/api/products", productsRoute);
 app.use("/api/users", usersRoute);
 app.use("/api", usersPages);
+app.use("/api/admin", adminPages);
 //app.use("/api/category", categoryRoute);
 
 
@@ -66,7 +68,7 @@ app.get("/api/error", (req, res)=>{
   const encodedObj = req.query.data;
   let myObj = JSON.parse(decodeURIComponent(encodedObj));
   console.log(myObj);
-	 res.render("404", myObj);
+	 res.render("admin/404", myObj);
 })
 
 

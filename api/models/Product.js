@@ -18,6 +18,15 @@ const reviewSchema = mongoose.Schema({
 
 })
 
+// const sizesSchema = mongoose.Schema({
+// 	size:{
+//        type:String
+// 	},
+//     numbers:{
+//     	type:String,
+//     }
+// })
+
 
 const productSchema = mongoose.Schema({
 	name:{
@@ -40,6 +49,16 @@ const productSchema = mongoose.Schema({
 		type:[String],
 		required:true
 	},
+	sizes:[
+         {
+         	size:{
+         		type:String
+         	},
+         	number:{
+                type:Number
+         	}
+         }
+		],
 	description:{
 		type:String,
 		required:true 

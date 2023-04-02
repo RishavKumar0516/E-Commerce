@@ -16,17 +16,17 @@
                           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" style="color:#fff;" >{{title}}</a>
                           <ul class="dropdown-menu" style="background:#1e272e;">
                             <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li><a class="dropdown-item" href="/api/users/update/userpassword">Change Password</a></li>
+                            <li><a class="dropdown-item" href="/api/admin/update/userpassword">Change Password</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="/api/auth/logout">Sign Out</a></li>
+                            <li><a class="dropdown-item" href="/api/admin/logout">Sign Out</a></li>
                           </ul>
                         </li>
                         {{else}}
                         <li class="nav-item">
-                            <a class="nav-link" href="/api/auth/register">Register</a>
+                            <a class="nav-link" href="/api/admin/register">Register</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/api/auth/login">Login</a>
+                            <a class="nav-link" href="/api/admin/login">Login</a>
                         </li>
                         {{/if}}     
                     </ul>
