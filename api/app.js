@@ -76,7 +76,7 @@ app.get("/api/error", (req, res)=>{
 
 const start = async () =>{
 	try{
-       await connectDB(db);
+       await connectDB(process.env.MONGODB_URL);
        app.listen(PORT, ()=>{
        	  console.log(`${PORT} Yes I am connected`);
        });
