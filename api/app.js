@@ -12,7 +12,6 @@ const {checkuserislogged, verifyToken} = require("./utils/verifyToken");
 const connectDB = require("./db/connect");
 
 const PORT = process.env.PORT || 10000;
-const db = process.env.MONGODB_URL;
 
 const authRoute = require("./routes/auth");
 const productsRoute = require("./routes/products");
