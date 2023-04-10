@@ -1,5 +1,6 @@
 require("dotenv").config();
 const express = require("express");
+const mongoose = require("mongoose");
 const app = express();
 const cookieParser = require('cookie-parser');
 const hbs = require("hbs");
@@ -11,6 +12,7 @@ const {checkuserislogged, verifyToken} = require("./utils/verifyToken");
 const connectDB = require("./db/connect");
 
 const PORT = process.env.PORT || 10000;
+const db = process.env.MONGODB_URL;
 
 const authRoute = require("./routes/auth");
 const productsRoute = require("./routes/products");
@@ -74,8 +76,8 @@ app.get("/api/error", (req, res)=>{
 
 const start = async () =>{
 	try{
-       await connectDB(process.env.MONGODB_URL);
-
+		console.log(db);
+       await connectDB(db);
        app.listen(PORT, ()=>{
        	  console.log(`${PORT} Yes I am connected`);
        });
