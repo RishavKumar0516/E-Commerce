@@ -21,9 +21,9 @@ const usersPages = require("./routes/userpages");
 const adminPages = require("./routes/adminpage");
 
 
-const static_path = path.join(__dirname, "../client/public");
-const template_path = path.join(__dirname, "../client/templates/views");
-const partials_path = path.join(__dirname, "../client/templates/partials");
+const static_path = path.join(__dirname, "../public");
+const template_path = path.join(__dirname, "../templates/views");
+const partials_path = path.join(__dirname, "../templates/partials");
 
 
 //middleware
@@ -76,7 +76,6 @@ app.get("/api/error", (req, res)=>{
 
 const start = async () =>{
 	try{
-		console.log(db);
        await connectDB(db);
        app.listen(PORT, ()=>{
        	  console.log(`${PORT} Yes I am connected`);
