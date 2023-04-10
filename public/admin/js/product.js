@@ -4,7 +4,7 @@ const getProduct = async () => {
     //event.preventDefault();
 
     try {
-        let url = `http://localhost:10000/api/products`;
+        let url = `https://e-commerce-allenparker.onrender.com/api/products`;
         //Await: Await function is used to wait for the promise. It could be used within the async block only.
         // It makes the code wait until the promise returns a result. It only makes the async block wait.
 

@@ -3,7 +3,7 @@
 const getfeatured_products = async ()=>{
 	try{
 
-		let url = `http://localhost:10000/api/index/products?featured=true`;
+		let url = `https://e-commerce-allenparker.onrender.com/api/index/products?featured=true`;
 		let response = await fetch(url);
 		let json = await response.json();
 		// console.log(json);
@@ -60,7 +60,7 @@ const getfeatured_products = async ()=>{
 const getnew_products = async (req, res)=>{
   try{
 
-    let url = `http://localhost:10000/api/index/products?latest=true`;
+    let url = `https://e-commerce-allenparker.onrender.com/api/index/products?latest=true`;
     let response = await fetch(url);
     let json = await response.json();
     // console.log(json);
@@ -117,7 +117,7 @@ const getnew_products = async (req, res)=>{
 const getinspired_products = async (req, res)=>{
   try{
 
-    let url = `http://localhost:10000/api/index/products?inspired=true`;
+    let url = `https://e-commerce-allenparker.onrender.com/api/index/products?inspired=true`;
     let response = await fetch(url);
     let json = await response.json();
      //console.log(json);

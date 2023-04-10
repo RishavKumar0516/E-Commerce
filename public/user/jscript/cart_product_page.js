@@ -15,7 +15,7 @@ const cartproducts = async ()=>{
         let totalproducts = cartproductObj.length;
 
 	for(let i = 0; i < cartproductObj.length; i++){
-		let url = `http://localhost:10000/api/products/find/${cartproductObj[i].productId}`;
+		let url = `https://e-commerce-allenparker.onrender.com/api/products/find/${cartproductObj[i].productId}`;
 		let response = await fetch(url);
 		let product = await response.json();
 		console.log(product);

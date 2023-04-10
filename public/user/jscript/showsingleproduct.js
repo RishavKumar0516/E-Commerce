@@ -1,7 +1,7 @@
 // //this checks the user is logined or not and based on that we show the information of cart. 
 const validateuser = async ()=>{
 
-      let url1 = `http://localhost:10000/api/auth/checkuserisvalidate`;
+      let url1 = `https://e-commerce-allenparker.onrender.com/api/auth/checkuserisvalidate`;
       let useris = await fetch(url1);
       let userinfo = await useris.json();
       // console.log(userinfo.username);
@@ -69,7 +69,7 @@ var path = window.location.pathname;
 var id = path.substring(path.lastIndexOf('/') + 1);
 console.log(id);
 
-let url = `http://localhost:10000/api/products/find/${id}`;
+let url = `https://e-commerce-allenparker.onrender.com/api/products/find/${id}`;
 let response = await fetch(url);
 let product = await response.json();
 console.log(product);

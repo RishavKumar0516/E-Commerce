@@ -5,7 +5,7 @@
 const getfeatured_products = async ()=>{
 	try{
 
-		let url = `http://localhost:10000/api/index/products`;
+		let url = `https://e-commerce-allenparker.onrender.com/api/index/products`;
 		let response = await fetch(url);
 		let json = await response.json();
 		console.log(json);

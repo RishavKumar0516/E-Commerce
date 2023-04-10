@@ -10,7 +10,7 @@ const showlikeproduct = async ()=>{
         }
          let html="";
         for(let i = 0; i < likeproductObj.length; i++){
-           let url = `http://localhost:10000/api/products/find/${likeproductObj[i]}`;
+           let url = `https://e-commerce-allenparker.onrender.com/api/products/find/${likeproductObj[i]}`;
            let response = await fetch(url);
            let product = await response.json();
            console.log(product);

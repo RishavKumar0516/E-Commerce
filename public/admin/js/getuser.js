@@ -4,7 +4,7 @@ const showDetails = async ()=>{
      const id = url.split('/').pop();
 
     try{
-        let url = `http://localhost:10000/api/users/${id}`;
+        let url = `https://e-commerce-allenparker.onrender.com/api/users/${id}`;
         const response = await fetch(url);
         const json = await response.json();
         console.log(json);

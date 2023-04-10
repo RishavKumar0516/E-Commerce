@@ -68,7 +68,7 @@ console.log("createProducts");
 
             try{
 
-                   let url = `http://localhost:10000/api/products/create`;
+                   let url = `https://e-commerce-allenparker.onrender.com/api/products/create`;
                    const fetchResult = await fetch(url, {
 
                            // Adding method type

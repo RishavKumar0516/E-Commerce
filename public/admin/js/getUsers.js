@@ -2,7 +2,7 @@
 
 const getUsers = async()=>{
 	try{
-        const url = `http://localhost:10000/api/users`;
+        const url = `https://e-commerce-allenparker.onrender.com/api/users`;
 		const users = await fetch(url);
 		const json = await users.json();
 		console.log(json);

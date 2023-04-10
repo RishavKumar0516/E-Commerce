@@ -18,7 +18,7 @@ const addEventToFunction = async ()=>{
  //this checks the user is logined or not and based on that we show the information of cart and like. 
 const validateuser = async ()=>{
 
-      let url1 = `http://localhost:10000/api/auth/checkuserisvalidate`;
+      let url1 = `https://e-commerce-allenparker.onrender.com/api/auth/checkuserisvalidate`;
       let useris = await fetch(url1);
       let userinfo = await useris.json();
       // console.log(userinfo.username);
@@ -133,7 +133,7 @@ function showproduct(event){
     //console.log(event.currentTarget);
     const val = event.currentTarget.getAttribute("value");
     // console.log(val);
-    window.location.href = `http://localhost:10000/api/index/products/${val}`;
+    window.location.href = `https://e-commerce-allenparker.onrender.com/api/index/products/${val}`;
 }
 
 
