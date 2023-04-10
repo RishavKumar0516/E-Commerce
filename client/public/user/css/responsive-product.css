@@ -92,7 +92,7 @@
 }
 .mini-container{
 	width: 85%;
-    height: 100%;
+    height: 400px;
 }
 .product-image{
         width: 100%;
@@ -101,7 +101,7 @@
 .buynow{
     height:40px;
 }
-.addto .buynow object{
+.addto .buynow .object{
     margin:2px;
     clear:both;
     width: 16px;
@@ -321,17 +321,9 @@ p{
 	.image-container .secondary{
     width:15%;
 }
-    .secondary img{ 
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin-left: 0;
-    margin-right:0;
-    padding: 0px 0px;
-}
 .mini-container{
 	width: 83%;
-  height: 100%;
+  height: 250px;
 }
 
 .heart2{
@@ -543,6 +535,11 @@ p{
     border-radius:25px;
     right:8px;
     top:8px;
+}
+
+.mini-container{
+    width: 83%;
+  height: 150px;
 }
 
 .heart2 i{

@@ -4,7 +4,7 @@ const getProduct = async () => {
     //event.preventDefault();
 
     try {
-        let url = `http://localhost:8000/api/products`;
+        let url = `http://localhost:10000/api/products`;
         //Await: Await function is used to wait for the promise. It could be used within the async block only.
         // It makes the code wait until the promise returns a result. It only makes the async block wait.
 
@@ -18,25 +18,6 @@ const getProduct = async () => {
         let html = "";
         data.forEach(function(element) {
             console.log(element);
-            /*html+=` 
-
-            <div class="product-box productBoxItems" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1500"><!-- product -2 -->
-                <div class="robert">
-                  <div class="product-img"><!-- image-area -->
-                      <img class="productImg" src="${element.image[0]}" alt="${element.name}">
-                  </div>
-
-                  <div class="product-content"><!-- content area -->
-                      <h4 class="heading product-name">${element.name}</h4>
-                      <div>
-                        <h2 class="heading product-price">${element.discountPrice}</h2>
-                        <span class="offer-price">${element.price}</span>
-                      </div>
-                  </div>
-              </div>
-              </div>
-
-            `;*/
 
             html += `
 
@@ -83,7 +64,7 @@ let deleteProduct = async (element) => {
     console.log(element.value);
 
     try {
-        let url = `http://localhost:8000/api/products/delete/${element.value}`;
+        let url = `http://localhost:10000/api/products/delete/${element.value}`;
 
         await fetch(url, {
                 //Adding method type
@@ -105,7 +86,7 @@ let deleteProduct = async (element) => {
 
 //calling for updating products 
 let updateProduct = async (element) => {
-   window.location.assign(`http://localhost:8000/api/products/update/${element.value}`)
+   window.location.assign(`http://localhost:10000/api/admin/index/update/${element.value}`)
 }
 
 

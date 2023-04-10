@@ -119,6 +119,21 @@ h1,h2,h3,h4{
     color: var(--title-color);
     font-weight:var(--font-semi-bold);
 }
+h2{
+     font-size: var(--h2-font-size);
+}
+h1{
+    font-size: var(--h1-font-size);
+}
+h4{
+    font-size:var(--normal-font-size);
+}
+ h3{
+    font-size: var(--h3-font-size);
+}
+p{
+    font-size: var(--smaller-font-size);
+}
 
 .black{
     font-size: .88rem ;
@@ -273,14 +288,14 @@ a{
    
 }
 .secondary .small-image:hover{
-    border:3px solid  darkcyan;
+/*     border:3px solid  darkcyan; */
 
 }
 .mini-container{
 	box-sizing: border-box;
 	width: 85%;
     height: 550px;
-	border: 2px solid red;
+	border: 2px solid darkcyan;
 	position: relative;
 }
 
@@ -324,25 +339,35 @@ a{
     clear:both;
 }
 .buynow{
+    box-sizing: border-box;
     width:49%;
     height:50px;
     background:yellow;
     display:flex;
     flex-direction: row;
     justify-content:center;
-    align-items:center;
+    align-items: center;
+    text-align: center;
     border-radius:2px;
     text-decoration:uppercase;
     color:white;
     background: #fb641b;
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
     clear:both;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+.buynow h4{
+    text-align: center;
+    margin-top: 7px;
 }
 .addto .buynow object{
     margin:5px;
     clear:both;
     width: 19px;
     height:19px;
+
 }
 .colo{
 
@@ -379,11 +404,13 @@ a{
 }
 .price2{
     position: relative;
+    padding: 0;
+    margin: 0;
 }
 .price2::after{
     content:"";
     height:2px;
-    width:63px;
+    width:100%;
     background:rgb(133, 141, 150);
     position:absolute;
     left:0;

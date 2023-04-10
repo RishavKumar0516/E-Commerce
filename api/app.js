@@ -10,7 +10,7 @@ const {checkuserislogged, verifyToken} = require("./utils/verifyToken");
 
 const connectDB = require("./db/connect");
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 10000;
 
 const authRoute = require("./routes/auth");
 const productsRoute = require("./routes/products");

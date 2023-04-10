@@ -11,8 +11,15 @@
     box-sizing:border-box;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
-}    
-
+} 
+/* body{
+    display: block;
+  width:100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}   
+ */
 /* ------------------- navigation bar section 1 start------------------ */
 
 .navigation{  
@@ -26,10 +33,11 @@
     width:100%;
     padding:10px;
     box-sizing:border-box;
-    background:rgba(255, 228, 196, 0);/*to make sticky comment this background*/
+/*     background:rgba(255, 228, 196, 0);/*to make sticky comment this background*/ */
+    background:red;/*to make sticky comment this background*/
     border-radius:4px;
     box-shadow:0 2px 5px rgba(0,0,0,.2);
-    z-index:11111;
+    z-index:111;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .logo{
@@ -55,17 +63,25 @@
     margin:0;
     padding:0;
 }
-.navbar .icon a{
+li{
+    list-style: none;
+}
+.navbar .icon li a{
     display:block;
     margin:10px 0;
     padding:10px 20px;
     text-decoration:none;
     color:#262626;
 }
-.navbar .icon a.active, .navbar .icon a:hover{
+.navbar .icon li a.active, .navbar .icon li a:hover{
      background:darkcyan;
      color:#fff;
     transition:0.5s;
+}
+
+.navbar .icon li .dropdown-menu li a{
+/*     background: #069370; */
+    color: #fff;
 }
 
 /* ------------------------------- navigation bar section 1 end---------------------------- */
@@ -322,6 +338,7 @@ h1,h2,h3,h4,span,p{
     text-align:center;
     line-height:25px;
     padding:5px 0;
+    font-size: 1rem;
     /* letter-spacing: 1px; */
 }
 .section .boxes  p{
@@ -978,7 +995,7 @@ overflow: hidden;
     width:210px;
 }
 .newsletter{
-    width:260px;
+    width:280px;
 }
 .intagram{
     width:290px;

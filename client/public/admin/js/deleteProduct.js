@@ -12,7 +12,7 @@ const product_id = document.getElementById('product_id');
                console.log("input");
            } else {
                try {
-                   let url = `http://localhost:8000/api/products/delete/${Product_id}`;
+                   let url = `http://localhost:10000/api/products/delete/${Product_id}`;
                    fetch(url, {
 
                            // Adding method type

@@ -123,6 +123,7 @@ margin-bottom:50px;
 margin-top:20px;
 }
 .offerbox5{
+    box-sizing: border-box;
   width:40px;
   height:22px;
     background-color: #26a541;
@@ -138,7 +139,10 @@ margin-top:20px;
 }
 .offerbox5 h2{
    color: #fff;
-   font-size: 18px;
+   font-size: 20px;
+   text-align: center;
+   margin: 0;
+   padding: 0;
 }
 
 .star-fa{

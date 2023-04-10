@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">  
 
-<head>         
+<head>  
+    {{> userHeader}}       
      <meta charset="UTF-8">    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,6 +24,7 @@
     <link rel="stylesheet" href="aos-animation/aos.css">
     <!-- these is the css Aos CDN link which helps to perform scroll animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
 </head>  
 
@@ -275,52 +277,7 @@
 
  <!-- ------------------footer section-10 start---------------------- -->
 
- <div class="footer">
-     <div class="footer-box">
-
-         <div class="about-us footer-item">
-             <h3 data-aos="fade-left" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000">About Us</h3>
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-             incididunt ut labore et dolore magna aliqua.
-             </p>
-         </div>
-
-         <div class="newsletter footer-item">
-            <h3 data-aos="fade-left" data-aos-offset="100" data-aos-delay="100" data-aos-duration="1000">Newsletter</h3>
-            <p>Stay update with our latest</p>
-            <form action="">
-                <input type="text" placeholder="Email address" name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-              </form>
-         </div>
-
-         <div class="intagram footer-item">
-            <h3 data-aos="fade-left" data-aos-offset="100" data-aos-delay="150" data-aos-duration="1000">Instagram Feed</h3>
-            <div class="insta">
-
-                <img src="/user/img/baby.jpg" width="87" alt="">
-                <img src="/user/img/dog.jpg" width="87" alt="">
-                <img src="/user/img/lady.jpg" width="87" alt="">
-
-            </div>
-         </div>
-
-         <div class="follow footer-item">
-            <h3 data-aos="fade-left" data-aos-offset="100" data-aos-delay="200" data-aos-duration="1000">Follow Us</h3>
-            <p>Let us be social</p>
-            <div class="links">
-                <a href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="https://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="mailto:merishavkumar@gmail.com?Subject=Reaching%20Out&body=How%20you"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
-            </div>
-         </div>
-
-     </div>
-     <p style="color:#f0f0f0; margin-top:20px;">Copyright &copy 2021 All right reserved By Allen parker.</p>
-
-
- </div>
+ {{> footer}}
 
 
  <!-- ------------------footer section-10 ends---------------------- -->
@@ -429,7 +386,7 @@
         });
     </script>
 
-    <!-- <script src="/user/js/script.js"></script> -->
+    <script src="/user/js/script.js"></script>
     <script src="/user/jscript/show_products.js"></script>
     <script src="/user/jscript/addTocartandLike.js"></script>
 

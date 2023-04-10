@@ -7,15 +7,9 @@ const addEventToFunction = async ()=>{
      element.addEventListener("click", showproduct);
    })
 
-   //adding eventListener on cartproduct
-   let cartproduct = document.querySelectorAll(".cartproduct");
-   cartproduct.forEach(element =>{
-     element.addEventListener("click", addToCart);
-   })
-
    //adding eventListener on likeproduct
    let likeproduct = document.querySelectorAll(".likeproduct");
-   likeproduct.forEach(element =>{
+   Array.from(likeproduct).forEach(element =>{
    element.addEventListener("click", addToLike);
    })
 
@@ -24,7 +18,7 @@ const addEventToFunction = async ()=>{
  //this checks the user is logined or not and based on that we show the information of cart and like. 
 const validateuser = async ()=>{
 
-      let url1 = `http://localhost:8000/api/auth/checkuserisvalidate`;
+      let url1 = `http://localhost:10000/api/auth/checkuserisvalidate`;
       let useris = await fetch(url1);
       let userinfo = await useris.json();
       // console.log(userinfo.username);
@@ -38,15 +32,8 @@ const validateuser = async ()=>{
 
 const check = async ()=>{
      //for cart product
-        let cartproduct = localStorage.getItem("cartproduct");
         let likeproduct = localStorage.getItem("likeproduct");
-        let cartproductObj;
         let likeproductObj;
-        if (cartproduct == null) {
-            cartproductObj = [];
-        } else {
-            cartproductObj = JSON.parse(cartproduct);
-        }
         if (likeproduct == null) {
             likeproductObj = [];
         } else {
@@ -54,75 +41,12 @@ const check = async ()=>{
         }
         
         let arr = document.getElementsByClassName('cart');
-        // console.log(arr);
         Array.from(arr).forEach(element=>{
             let id = element.getAttribute("id");
-            if(cartproductObj.includes(id)){
-               element.children[0].classList.add("cart_active");
-            }
-
             if(likeproductObj.includes(id)){
-               element.children[1].classList.add("like_active");
+               element.children[0].classList.add("like_active");
             }
         })
-}
-
-
-
-//add to cart
-function removecart(item) {
-  console.log("delete the element with id " + item);
-
-  let cartproduct = localStorage.getItem("cartproduct"); //these returns the value of key whose name is notes, stored in local storage. agar koi notes pahle sai local storage mai ai tou useea return ker do.
-  if (cartproduct == null) {
-    //if there is no any notes named key is stored in local storage the it is going to return null.
-    cartproductObj = []; //if notes is null then setting the array as empty.
-  } else {
-    cartproductObj = JSON.parse(cartproduct); //json.parse() takes a valid string and convert the string in to javascript object. so it convert the string(notes) in to array.
-  }
-  var index = cartproductObj.indexOf(item);
-  console.log(index);
-if (index !== -1) {
-  cartproductObj.splice(index, 1);
-}
-  localStorage.setItem("cartproduct", JSON.stringify(cartproductObj)); 
-  console.log(cartproduct);
-}
-
-//add to cart only when user is logged in
-function addToCart(event) {
-    event.stopPropagation();
-    // console.log(event.currentTarget);
-    cart(event);
-}
-
-//add product to localstorage cart
-const cart = async (event)=>{
-    console.log(event.currentTarget);
-    var parentCart = event.currentTarget.parentElement;
-    var parentImg = parentCart.parentElement;
-    var box = parentImg.parentElement;
-    // console.log(box);
-    var id = box.getAttribute("value");
-    // console.log(id);
-    if (event.currentTarget.classList.contains('cart_active')) {
-        event.currentTarget.classList.remove("cart_active");
-        removecart(id);
-    } else {
-         // console.log(id);
-        let cartproduct = localStorage.getItem("cartproduct");
-        if (cartproduct == null) {
-            cartproductObj = [];
-        } else {
-            cartproductObj = JSON.parse(cartproduct);
-        }
-
-        cartproductObj.push(id);
-        //adding content to localStorage
-        localStorage.setItem("cartproduct", JSON.stringify(cartproductObj));
-        console.log(cartproductObj);
-        event.currentTarget.classList.add("cart_active");
-    }
 }
 
 
@@ -151,25 +75,18 @@ if (index !== -1) {
    changesDone();
 }
 
-//add to like only when user is logged in
-function addToLike(event) {
-    // console.log(event.currentTarget);
-    event.stopPropagation();
-    like(event);
-}
-
 
 //add product to localstorage like
-const like = async (event)=>{
-    console.log(event.currentTarget);
-    var parentCart = event.currentTarget.parentElement;
+function like(element){
+    // console.log(element);
+    var parentCart = element.parentElement;
     var parentImg = parentCart.parentElement;
     var box = parentImg.parentElement;
     // console.log(box);
     var id = box.getAttribute("value");
     // console.log(id);
-    if (event.currentTarget.classList.contains('like_active')) {
-        event.currentTarget.classList.remove("like_active");
+    if (element.classList.contains('like_active')) {
+        element.classList.remove("like_active");
         removelike(id);
     } else {
          // console.log(id);
@@ -184,10 +101,29 @@ const like = async (event)=>{
         //adding content to localStorage
         localStorage.setItem("likeproduct", JSON.stringify(likeproductObj));
         // console.log(likeproductObj);
-        event.currentTarget.classList.add("like_active");
+        element.classList.add("like_active");
     }
 }
 
+
+//add to like only when user is logged in
+const addToLike = async(event)=> {
+    event.stopPropagation();
+    // console.log(event.currentTarget);
+    const target = event.currentTarget;
+    
+          
+          let x = await validateuser();
+          console.log(x);
+          if(x===true){
+             like(target);
+          }
+          else{
+             alert("You are not authenticate, please login");
+          }
+        
+       
+}
 
 //this will redirect you to single product page
 function showproduct(event){
@@ -197,7 +133,7 @@ function showproduct(event){
     //console.log(event.currentTarget);
     const val = event.currentTarget.getAttribute("value");
     // console.log(val);
-    window.location.href = `http://localhost:8000/api/index/products/${val}`;
+    window.location.href = `http://localhost:10000/api/index/products/${val}`;
 }
 
 

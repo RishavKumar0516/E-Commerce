@@ -10,7 +10,7 @@ const showlikeproduct = async ()=>{
         }
          let html="";
         for(let i = 0; i < likeproductObj.length; i++){
-           let url = `http://localhost:8000/api/products/find/${likeproductObj[i]}`;
+           let url = `http://localhost:10000/api/products/find/${likeproductObj[i]}`;
            let response = await fetch(url);
            let product = await response.json();
            console.log(product);
@@ -22,8 +22,6 @@ const showlikeproduct = async ()=>{
                     <div class="image-container" id="id3">
                         <img class="image-box2" src="${product.image[0]}" alt="">
                         <div class="cart" id="${product._id}">
-                            <button class="id-1 cartproduct" id="add"><i
-                                    class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
                             <button class="id-1 likeproduct" id="heart1"><i class="fa fa-heart"
                                     id="heart" aria-hidden="true"></i></button>
                         </div>                    </div>

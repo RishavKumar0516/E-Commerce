@@ -9,7 +9,7 @@ let updateProduct = async () => {
     console.log("update product");
     try {
         //get request for getting data 
-        let url = `http://localhost:8000/api/products/find/${product_id}`;
+        let url = `http://localhost:10000/api/products/find/${product_id}`;
         const response = await fetch(url);
         const data = await response.json();
         console.log(data);
@@ -144,7 +144,7 @@ let update = async () => {
 
     //console.log(imagesArray);
         try {
-            let url = `http://localhost:8000/api/products/update/${product_id}`;
+            let url = `http://localhost:10000/api/products/update/${product_id}`;
             await fetch(url, {
 
                     // Adding method type

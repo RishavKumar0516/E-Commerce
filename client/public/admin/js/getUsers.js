@@ -2,7 +2,7 @@
 
 const getUsers = async()=>{
 	try{
-        const url = `http://localhost:8000/api/users`;
+        const url = `http://localhost:10000/api/users`;
 		const users = await fetch(url);
 		const json = await users.json();
 		console.log(json);
@@ -20,7 +20,7 @@ const getUsers = async()=>{
                       </div>
                       <div class="right">
                           <div class="button-element rmargin">
-                              <a href="/api/users/usersinfo/${element._id}" class="btn">Details</a>
+                              <a href="/api/admin/index/usersinfo/${element._id}" class="btn">Details</a>
                           </div>
                       </div>
                     </div>

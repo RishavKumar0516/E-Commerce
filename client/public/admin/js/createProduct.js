@@ -68,7 +68,7 @@ console.log("createProducts");
 
             try{
 
-                   let url = `http://localhost:8000/api/products/create`;
+                   let url = `http://localhost:10000/api/products/create`;
                    const fetchResult = await fetch(url, {
 
                            // Adding method type

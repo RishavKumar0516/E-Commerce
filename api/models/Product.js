@@ -41,7 +41,7 @@ const productSchema = mongoose.Schema({
 		type:String,
 		required:true 
 	},
-    title:{
+       title:{
 		type:String,
 		required:true 
 	},

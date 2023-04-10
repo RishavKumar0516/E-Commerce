@@ -3,7 +3,7 @@
 const getfeatured_products = async ()=>{
 	try{
 
-		let url = `http://localhost:8000/api/index/products?featured=true`;
+		let url = `http://localhost:10000/api/index/products?featured=true`;
 		let response = await fetch(url);
 		let json = await response.json();
 		// console.log(json);
@@ -19,8 +19,6 @@ const getfeatured_products = async ()=>{
                     <div class="image-container" id="id3">
                         <img class="image-box2" src="${json[i].image[0]}" alt="">
                         <div class="cart" id="${json[i]._id}">
-                            <button class="id-1 cartproduct" id="add"><i
-                                    class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
                             <button class="id-1 likeproduct" id="heart1"><i class="fa fa-heart"
                                     id="heart" aria-hidden="true"></i></button>
                         </div>  
@@ -62,7 +60,7 @@ const getfeatured_products = async ()=>{
 const getnew_products = async (req, res)=>{
   try{
 
-    let url = `http://localhost:8000/api/index/products?latest=true`;
+    let url = `http://localhost:10000/api/index/products?latest=true`;
     let response = await fetch(url);
     let json = await response.json();
     // console.log(json);
@@ -77,8 +75,6 @@ const getnew_products = async (req, res)=>{
                     <div class="image-container" id="id3">
                         <img class="image-box2" src="${json[i].image[0]}" alt="">
                         <div class="cart" id="${json[i]._id}">
-                            <button class="id-1 cartproduct" id="add"><i
-                                    class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
                             <button class="id-1 likeproduct" id="heart1"><i class="fa fa-heart"
                                     id="heart" aria-hidden="true"></i></button>
                         </div>
@@ -121,7 +117,7 @@ const getnew_products = async (req, res)=>{
 const getinspired_products = async (req, res)=>{
   try{
 
-    let url = `http://localhost:8000/api/index/products?inspired=true`;
+    let url = `http://localhost:10000/api/index/products?inspired=true`;
     let response = await fetch(url);
     let json = await response.json();
      //console.log(json);
@@ -135,9 +131,7 @@ const getinspired_products = async (req, res)=>{
                 <div class="box2" value="${json[i]._id}">
                     <div class="image-container" id="id3">
                         <img class="image-box2" src="${json[i].image[0]}" alt="">
-                        <div class="cart">
-                            <button class="id-1 cartproduct" id="${json[i]._id}"><i
-                                    class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+                        <div class="cart" id="${json[i]._id}">
                             <button class="id-1 likeproduct" id="heart1"><i class="fa fa-heart"
                                     id="heart" aria-hidden="true"></i></button>
                         </div>
@@ -164,6 +158,7 @@ const getinspired_products = async (req, res)=>{
         //check user is logged in or not, based on that show user cart and like product
         validateuser().then(x =>{
           if(x===true){
+            console.log("calling to check method")
              check();
           }
         });

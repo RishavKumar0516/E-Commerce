@@ -1,55 +1,182 @@
+
+
+.containerproducts{
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.productBox{
+    position: relative;
+    width: 80%;
+    border: 2px solid black;
+    height: 90px;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    border-radius: 8px;
+    box-shadow: 0 0 2px 1px black;
+    clear: both;
+    margin-bottom: 3rem;
+}
+.productBox .image{
+    margin-left: 30px;
+        position: relative;
+    overflow: hidden;
+    height: 70px;
+    width: 70px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+/*     border: 1px solid orange; */
+}
+.productBox .image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.productBox .content{
+        margin-left: 8rem;
+/*         width: 400px; */
+        height: 100%;
+        display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    flex-direction: row;
+/*     border: 1px solid green; */
+    padding: 0;
+}
+
+.productBox .content .left3{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+}
+
+
+.productBox .content .productName{
+    display:inline-block;
+    text-align: left;
+    width: 100%;
+/*     border: 1px solid red; */
+}
+
+.productBox .content .left3 .combinebox{
+    display:flex;
+    flex-direction: row;
+/*     border: 1px solid red; */
+}
+.productBox .content .left3 h4{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+/*  border: 1px solid grey; */
+}
+.productBox .combinebox .price, .combinebox .discount, .combinebox .size{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.productBox .combinebox .price{
+    margin-left: 3rem;
+    position: relative;
+}
+.productBox .combinebox .price::before{
+    position: absolute;
+    content: "";
+    top: 45%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: black;
+}
+
+.productBox .right{
+    position: absolute;
+    right: 3rem;
+    float: right;
+/*     border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+ .productBox .btn{
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 6px 10px;
+    background: #fff;
+        border-radius: 10px;
+        border: 2px solid black;
+        box-shadow: 0 0 1px 0px black;
+
+}
+
+.productBox .rmargin{
+    margin-right: 2rem;
+}
+
+/* price calculation */
+
 .horizental-line{
-	display: block;
-	height: 8px;
-	border: 2px solid rgb(46,46,46);
-	background: rgb(46,46,46);
-	color: rgb(46,46,46);
+    display:block;
+    height: 8px;
+    border: 2px solid rgb(46,46,46);
+    background: rgb(46,46,46);
+    color: rgb(46,46,46);
 }
 .price-section{
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	padding: 20px 50px;
-	justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 50px;
+    justify-content: center;
 
     
 }
 .ln1{
-	display: flex;
-	width: 100%;
-	padding: 10px 0px;
-	justify-content: space-between;
+    display: flex;
+    width: 100%;
+    padding: 10px 0px;
+    justify-content: space-between;
 
 }
 .oneline{
-	display: block;
-	font-size:.95em;
+    display: block;
+    font-size:.95em;
     font-weight:450;
     color:#3d3d3d;
  
 }
 .total-style{
-	color: rgb(46,46,46);
-	font-weight: 1000;
-	font-family: bold;
-	font-size:.95em;
+    color: rgb(46,46,46);
+    font-weight: 1000;
+    font-family: bold;
+    font-size:.95em;
 
 }
 .place-order{
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
 }
 .deletebutton{
-	display: inline-block;
-	position: absolute;
-	right :30px;
-	top: 50%;
-	padding:5px 10px;
-	font-size:.75em;
-	color:#74e40b;
+    display: inline-block;
+    position: absolute;
+    right :30px;
+    top: 50%;
+    padding:5px 10px;
+    font-size:.75em;
+    color:#74e40b;
     background:#fff;
     text-transform:uppercase;
     text-spacing:normal;
@@ -58,7 +185,6 @@
     transition:0.5s;
     box-shadow: 0 0 0 1px #74e40b;
     cursor: pointer;
-
 }
 .deletebutton:hover{
     background:#74e40b;

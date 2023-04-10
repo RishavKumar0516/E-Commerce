@@ -13,7 +13,7 @@
            } else {
                try {
                    console.log("fetching request");
-                   let url = `http://localhost:8000/api/auth/login`;
+                   let url = `http://localhost:10000/api/auth/login`;
                    fetch(url, {
 
                            // Adding method type

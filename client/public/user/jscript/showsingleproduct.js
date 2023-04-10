@@ -1,3 +1,66 @@
+// //this checks the user is logined or not and based on that we show the information of cart. 
+const validateuser = async ()=>{
+
+      let url1 = `http://localhost:10000/api/auth/checkuserisvalidate`;
+      let useris = await fetch(url1);
+      let userinfo = await useris.json();
+      // console.log(userinfo.username);
+      if(userinfo.username== ""){
+          return false;
+      }
+      return true;
+}
+
+
+//find the product is present in the array of objects
+const find_product = ((cartproductObj, id)=>{
+    for(let i = 0; i < cartproductObj.length; i++){
+        if(cartproductObj[i].productId == id) return i;
+    }
+    return -1;
+})
+
+
+
+//check the product is already added in cart if yes then show "remove", else show "add to cart" and it only works
+//when user is logged in.
+// this function is only called when user is logged in.
+const check = async (id)=>{
+    // console.log(id);
+     //for cart product
+        let cartproduct = localStorage.getItem("cartproduct");
+        if (cartproduct == null) {
+            cartproductObj = [];
+        } else {
+            cartproductObj = JSON.parse(cartproduct);
+        }
+        // console.log(cartproductObj.includes(id));
+        let index = await find_product(cartproductObj, id);
+        if(index!=-1){
+           document.getElementsByClassName("carttext")[0].innerText = "REMOVE";
+        }
+        else{
+        document.getElementsByClassName("carttext")[0].innerText = "ADD TO CART";
+         }
+
+      //for like product
+        let likeproduct = localStorage.getItem("likeproduct");
+        if (likeproduct == null) {
+            likeproductObj = [];
+        } else {
+            likeproductObj = JSON.parse(likeproduct);
+        }
+        // console.log(likeproductObj.includes(id));
+        if(likeproductObj.includes(id)){
+           document.getElementsByClassName("addtolike")[0].style.color = "red";                                                              
+        }
+        else{
+        document.getElementsByClassName("addtolike")[0].style.color ="#fff"; 
+       }
+}
+
+
+
 
 const showsingleproduct = async ()=>{
 
@@ -6,7 +69,7 @@ var path = window.location.pathname;
 var id = path.substring(path.lastIndexOf('/') + 1);
 console.log(id);
 
-let url = `http://localhost:8000/api/products/find/${id}`;
+let url = `http://localhost:10000/api/products/find/${id}`;
 let response = await fetch(url);
 let product = await response.json();
 console.log(product);
@@ -29,12 +92,12 @@ console.log(product);
                 <div class="addto">
                     <div onclick="addtocart('${product._id}')" class="buynow colo">
                         <!--<i class="fa fa-shopping-cart" style="font-size:19px;"aria-hidden="true"></i>-->
-                        <object data="img/cart.svg"></object>
+                        <object data="/user/img/cart.svg"></object>
                         <h4 class="ava avali white carttext">ADD TO CART</h4>
                     </div>
                     <div class="buynow">
                         <!--<i class="fa fa-bolt" style="font-size:19px;" aria-hidden="true"></i>-->
-                        <object data="img/bolt-solid.svg"></object>
+                        <object data="/user/img/bolt-solid.svg"></object>
                         <span class="_3iRXzi"></span>
                         <h4 class="ava avali white">BUY NOW</h4>
                     </div>
@@ -46,8 +109,9 @@ let contentElems = document.getElementsByClassName("product1")[0];
 	contentElems.innerHTML = html1;
 
     let html3 = "";
+    console.log(product.image.length);
     for(let i = 0; i < product.image.length; i++){
-        if(i===0){
+        if(i==0){
             html3+=`
                       <div onclick="changeimage(this)" class="small-image active">
                         <img src="${product.image[0]}" alt="" class="smallImg" />
@@ -162,18 +226,7 @@ let contentElems = document.getElementsByClassName("product1")[0];
                         <div class="flexBoxCol">
                             <h4 class="offers mg-b c-blue">View detail</h4>
                             <div class="aboutsize flexBox mg-t">
-                                <h4 class="Inline mg-r top">Size</h4>
-                                <div class="combine">
-                                    <h3 onclick="addActive(this)" class="boxsizes ">30</h3>
-                                    <h3 onclick="addActive(this)" class="boxsizes ">32</h3>
-                                    <h3 onclick="addActive(this)" class="boxsizes ">34</h3>
-                                    <h3 onclick="addActive(this)" class="boxsizes ">36</h3>
-                                    <h3 onclick="addActive(this)" class="boxsizes ">38</h3>
-                                </div>
-                                <div class="combine normal">
-                                    <h4 class="offers mg-b Inline c-blue">Size chart</h4>
-                                    <i class="fa-solid fa-ruler c-blue"></i>
-                                </div>
+                                
                             </div>
                             <div class="flexBox sellerinfo mg-t">
                                 <h4 class="Inline seller top">Seller</h4>
@@ -356,7 +409,7 @@ let contentElems = document.getElementsByClassName("product1")[0];
    html += `              
               <div class="product-name">
                             <h3 class="flexBoxCol mg-b">
-                                <span class="brand grey">Killer</span>
+                                <span class="brand grey">${product.title}</span>
                                 <span class="productname">${product.name}</span>
                             </h3>
                             <h4 class="offers mg-b green">Special price</h4>
@@ -370,7 +423,7 @@ let contentElems = document.getElementsByClassName("product1")[0];
                                 <i class="fa-solid fa-indian-rupee-sign flatoff Inline"></i>
                                 <span class="Inline flatoff">${product.discountPrice}</span>
                             </div>
-                            <h4 class="price3 Inline green">33% off</h4>
+                            <h4 class="price3 Inline green">${product.discountPercent} off</h4>
                             <span class="circle">i</span>
                         </div>  
             `;
@@ -378,37 +431,52 @@ let contentElems = document.getElementsByClassName("product1")[0];
 let contentElems2 = document.getElementsByClassName("3452")[0];
     contentElems2.innerHTML = html;
     
-    //check user is login or not
 
-    validateuser().then(x =>{
+    // console.log(product.sizes.length);
+    if(product.sizes.length!=0){
+        let detail="";
+        detail+=`
+                                <h4 class="Inline mg-r top">Size</h4>
+                                <div class="combine" id="sizebox">
+                                    
+                                </div>
+                                <div class="combine normal">
+                                    <h4 class="offers mg-b Inline c-blue">Size chart</h4>
+                                    <i class="fa-solid fa-ruler c-blue"></i>
+                                </div>
+
+        `;
+        document.getElementsByClassName('aboutsize')[0].innerHTML = detail;
+
+        let size = "";
+        for(let i = 0; i < product.sizes.length; i++){
+            // console.log(product.sizes[i].number);
+            if(product.sizes[i].number>0){
+                size+=`   
+                   <h3 onclick="addActive(this)" class="boxsizes ">${product.sizes[i].size}</h3>   
+                `;
+            }
+        }
+
+        document.getElementById('sizebox').innerHTML = size;
+    }
+
+
+    //check user is login or not
+    let x = await validateuser();
     if(x===true){
         check(id);
     }
-   });
 
 
    
 }
 catch(err){
-	console.log("cannot get product");
+	console.log(err);
 }
 
 }
 
-
-
-// //this checks the user is logined or not and based on that we show the information of cart. 
-const validateuser = async ()=>{
-
-      let url1 = `http://localhost:8000/api/auth/checkuserisvalidate`;
-      let useris = await fetch(url1);
-      let userinfo = await useris.json();
-      console.log(userinfo.username);
-      if(userinfo.username== ""){
-          return false;
-      }
-      return true;
-}
 
  showsingleproduct();
 
@@ -429,39 +497,49 @@ function changeimage(element){
 }
 
 //remove product from the cart localstorage
-function removecart(item) {
-  console.log("delete the element with id " + item);
-
-  let cartproduct = localStorage.getItem("cartproduct"); 
-  if (cartproduct == null) {
-    cartproductObj = []; 
-  } else {
-    cartproductObj = JSON.parse(cartproduct); 
-  }
-  var index = cartproductObj.indexOf(item);
-  console.log(index);
-if (index !== -1) {
+const removecart = async (index)=>{
+  // console.log("delete the element with id " + index);
+  let cartproduct = localStorage.getItem("cartproduct");
+        if (cartproduct == null) {
+            cartproductObj = [];
+        } else {
+            cartproductObj = JSON.parse(cartproduct);
+        }
   cartproductObj.splice(index, 1);
+  await localStorage.setItem("cartproduct", JSON.stringify(cartproductObj)); 
+  // console.log(cartproductObj);
 }
-  localStorage.setItem("cartproduct", JSON.stringify(cartproductObj)); 
-  console.log(cartproduct);
+
+
+//check size is selected by the user or not
+const sizeSelected = async ()=>{
+    let arr = document.getElementsByClassName('boxsizes');
+    if(arr.length==0) return 0;
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i].classList.contains('active')){
+            return arr[i].innerText;
+        }
+    }
+    return -1;
 }
+
 
 //add product to the cart
 const addtocart = async (id)=>{
    console.log(id);
-    validateuser().then(x =>{
+    let x = await validateuser();
+    console.log(x);
     if(x===true){
         check(id);
         cart(id);
+
     }
-    else alert("You are not authoried please login...")
- });
+    else alert("You are not authoried please login...");
 
 }
 //add cart product to localstorage
 const cart = async (id)=>{
-       check(id);
+       await check(id);
    var pro = document.getElementsByClassName("carttext")[0];
    console.log(pro);
    
@@ -471,17 +549,33 @@ const cart = async (id)=>{
         } else {
             cartproductObj = JSON.parse(cartproduct);
         }
-        if(cartproductObj.includes(id)){
-           await removecart(id);
+
+        const index = await find_product(cartproductObj, id);
+        console.log(index);
+        if(index!= -1){
+           await removecart(index);
            document.getElementsByClassName("carttext")[0].innerText = "ADD TO CART";
         }
         else{
+         let val = await sizeSelected();
+        console.log(val);
+        if(val >= 0 || val!= -1){
 
-         await cartproductObj.push(id);
+            //creating object
+            myobj = {
+                productId:id,
+                size:val
+            }
+            
+        await cartproductObj.push(myobj);
         //adding content to localStorage
         localStorage.setItem("cartproduct", JSON.stringify(cartproductObj));
         console.log(cartproductObj);
         document.getElementsByClassName("carttext")[0].innerText = "REMOVE";
+        }
+        else{
+            alert("Please select the size of the product");
+        }
     }
 }
 
@@ -503,7 +597,7 @@ if (index !== -1) {
   likeproductObj.splice(index, 1);
 }
   localStorage.setItem("likeproduct", JSON.stringify(likeproductObj)); 
-  console.log(likeproduct);
+  console.log(likeproductObj);
 }
 
 
@@ -538,7 +632,7 @@ const like = async (id)=>{
         }
         else{
 
-         await likeproductObj.push(id);
+         likeproductObj.push(id);
         //adding content to localStorage
         localStorage.setItem("likeproduct", JSON.stringify(likeproductObj));
         console.log(likeproductObj);
@@ -548,41 +642,6 @@ const like = async (id)=>{
 
 
 
-//check the product is already added in cart if yes then show "remove", else show "add to cart" and it only works
-//when user is logged in.
-// this function is only called when user is logged in.
-const check = async (id)=>{
-    console.log(id);
-     //for cart product
-        let cartproduct = localStorage.getItem("cartproduct");
-        if (cartproduct == null) {
-            cartproductObj = [];
-        } else {
-            cartproductObj = JSON.parse(cartproduct);
-        }
-        console.log(cartproductObj.includes(id));
-        if(cartproductObj.includes(id)){
-           document.getElementsByClassName("carttext")[0].innerText = "REMOVE";
-        }
-        else{
-        document.getElementsByClassName("carttext")[0].innerText = "ADD TO CART";
-
-      //for like product
-        let likeproduct = localStorage.getItem("likeproduct");
-        if (likeproduct == null) {
-            likeproductObj = [];
-        } else {
-            likeproductObj = JSON.parse(likeproduct);
-        }
-        console.log(likeproductObj.includes(id));
-        if(likeproductObj.includes(id)){
-           document.getElementsByClassName("addtolike")[0].style.color = "red";                                                              
-        }
-        else{
-        document.getElementsByClassName("addtolike")[0].style.color ="#fff"; 
-          }
-    }
-}
 
 
 

@@ -14,7 +14,8 @@
     "numReviews":0,
     "discountPercent":"10%",
     "discountPrice":"720",
-    "sizes":[{"size":"28", "numbers":"10"},{"size":"30", "numbers":"10"},{"size":"32", "numbers":"10"},{"size":"32", "numbers":"10"}]
+    "countInStock":40,
+    "sizes":[{"size":"28", "number":10},{"size":"30", "number":10},{"size":"32", "number":10},{"size":"32", "number":10}]
 },
 {
     "name":"112 rodaster jeans",
@@ -31,7 +32,8 @@
     "numReviews":12,
     "discountPercent":"20",
     "discountPrice":"800",
-    "sizes":[{"size":"28", "numbers":"10"},{"size":"30", "numbers":"10"},{"size":"32", "numbers":"10"}]
+    "countInStock":30,
+    "sizes":[{"size":"28", "number":10},{"size":"30", "number":10},{"size":"32", "number":10}]
 },
 {
     "name":"113 men skinny mid blue jeans",
@@ -48,7 +50,8 @@
     "numReviews":12,
     "discountPercent":"25%",
     "discountPrice":"976",
-    "sizes":[{"size":"28", "numbers":"10"},{"size":"30", "numbers":"10"},{"size":"32", "numbers":"10"}]
+    "countInStock":30,
+    "sizes":[{"size":"28", "number":10},{"size":"30", "number":10},{"size":"32", "number":10}]
 },
 {
     "name":"114 highlander slim fit jeans",
@@ -65,7 +68,8 @@
     "numReviews":12,
     "discountPercent":"10%",
     "discountPrice":"675",
-    "sizes":[{"size":"28", "numbers":"10"},{"size":"30", "numbers":"10"},{"size":"32", "numbers":"10"}]
+    "countInStock":30,
+    "sizes":[{"size":"28", "number":10},{"size":"30", "number":10},{"size":"32", "number":10}]
 },
 {
     "name":"115 women skinny mid dark blue jeans",
@@ -82,7 +86,8 @@
     "numReviews":12,
     "discountPercent":"10%",
     "discountPrice":"675",
-    "sizes":[{"size":"28", "numbers":"10"},{"size":"30", "numbers":"10"},{"size":"32", "numbers":"10"}]
+    "countInStock":30,
+    "sizes":[{"size":"28", "number":10},{"size":"30", "number":10},{"size":"32", "number":10}]
 },
 {
     "name":"116 Women Graphic Print Round Neck Pink T-Shirt",
@@ -99,7 +104,8 @@
     "numReviews":0,
     "discountPercent":"10%",
     "discountPrice":"801",
-    "sizes":[{"size":"S", "numbers":"10"},{"size":"M", "numbers":"10"},{"size":"L", "numbers":"10"}]
+    "countInStock":30,
+    "sizes":[{"size":"S", "number":10},{"size":"M", "number":10},{"size":"L", "number":10}]
 },
 {
     "name":"117 7Women Color Block Round Neck Multi color T-Shirt",
@@ -116,7 +122,8 @@
     "numReviews":0,
     "discountPercent":"15%",
     "discountPrice":"510",
-    "sizes":[{"size":"S", "numbers":"10"},{"size":"M", "numbers":"10"},{"size":"L", "numbers":"10"}]
+    "countInStock":30,
+    "sizes":[{"size":"S", "number":10},{"size":"M", "number":10},{"size":"L", "number":10}]
 },
 {
     "name":"118 Dri-FIT Men Printed Round Neck Black T-Shirt",
@@ -133,7 +140,8 @@
     "numReviews":0,
     "discountPercent":"5%",
     "discountPrice":"760",
-    "sizes":[{"size":"S", "numbers":"10"},{"size":"M", "numbers":"10"},{"size":"L", "numbers":"10"}]
+    "countInStock":30,
+    "sizes":[{"size":"S", "number":10},{"size":"M", "number":10},{"size":"L", "number":10}]
 },
 {
     "name":"119 original rodaster",
@@ -150,7 +158,8 @@
     "numReviews":12,
     "discountPercent":"12%",
     "discountPrice":"789",
-    "sizes":[{"size":"S", "numbers":"10"},{"size":"M", "numbers":"10"},{"size":"L", "numbers":"10"}]
+    "countInStock":30,
+    "sizes":[{"size":"S", "number":10},{"size":"M", "number":10},{"size":"L", "number":10}]
 },
 {
     "name":"110 Metranaut trousers",
@@ -167,7 +176,8 @@
     "numReviews":0,
     "discountPercent":"0%",
     "discountPrice":"566",
-    "sizes":[{"size":"28", "numbers":"10"},{"size":"30", "numbers":"10"},{"size":"32", "numbers":"10"}]
+    "countInStock":30,
+    "sizes":[{"size":"28", "number":10},{"size":"30", "number":10},{"size":"32", "number":10}]
 },
 {
     "name":"111 sparx shoe",
@@ -184,7 +194,8 @@
     "numReviews":0,
     "discountPercent":"5%",
     "discountPrice":"620",
-    "sizes":[{"size":"8", "numbers":"10"},{"size":"9", "numbers":"10"},{"size":"10", "numbers":"10"}]
+    "countInStock":30,
+    "sizes":[{"size":"28", "number":10},{"size":"30", "number":10},{"size":"32", "number":10}]
 },
 {
     "name":"112 Kids bath tub",
@@ -200,7 +211,8 @@
     "rating":5,
     "numReviews":0,
     "discountPercent":"20%",
-    "discountPrice":"620"
+    "discountPrice":"620",
+    "countInStock":10
 },
 {
     "name":"113 redtape shirt",
@@ -217,7 +229,8 @@
     "numReviews":0,
     "discountPercent":"10%",
     "discountPrice":"600",
-    "sizes":[{"size":"S", "numbers":"10"},{"size":"M", "numbers":"10"},{"size":"L", "numbers":"10"}]
+    "countInStock":30,
+    "sizes":[{"size":"S", "number":10},{"size":"M", "number":10},{"size":"L", "number":10}]
 },
 {
     "name":"114 Tanip shirts",
@@ -234,7 +247,8 @@
     "numReviews":0,
     "discountPercent":"12%",
     "discountPrice":"616",
-    "sizes":[{"size":"S", "numbers":"10"},{"size":"M", "numbers":"10"},{"size":"L", "numbers":"10"}]
+    "countInStock":30,
+    "sizes":[{"size":"S", "number":10},{"size":"M", "number":10},{"size":"L", "number":10}]
 },
 {
     "name":"115 Kids Dress",
@@ -251,7 +265,8 @@
     "numReviews":0,
     "discountPercent":"10%",
     "discountPrice":"540",
-    "sizes":[{"size":"S", "numbers":"10"},{"size":"M", "numbers":"10"},{"size":"L", "numbers":"10"}]
+    "countInStock":30,
+    "sizes":[{"size":"S", "number":10},{"size":"M", "number":10},{"size":"L", "number":10}]
 },
 {
     "name":"116 Boys and girls casual red dress",
@@ -268,7 +283,8 @@
     "numReviews":0,
     "discountPercent":"20%",
     "discountPrice":"400",
-    "sizes":[{"size":"S", "numbers":"10"},{"size":"M", "numbers":"10"},{"size":"L", "numbers":"10"}]
+    "countInStock":30,
+    "sizes":[{"size":"S", "number":10},{"size":"M", "number":10},{"size":"L", "number":10}]
 },
 {
     "name":"113 women kurta paint",
@@ -285,7 +301,8 @@
     "numReviews":0,
     "discountPercent":"5%",
     "discountPrice":"950",
-    "sizes":[{"size":"S", "numbers":"10"},{"size":"M", "numbers":"10"},{"size":"L", "numbers":"10"}]
+    "countInStock":30,
+    "sizes":[{"size":"S", "number":10},{"size":"M", "number":10},{"size":"L", "number":10}]
 },
 {
     "name":"113 embellished Bollywood silk saree",
@@ -301,7 +318,8 @@
     "rating":5,
     "numReviews":0,
     "discountPercent":"5%",
-    "discountPrice":"941"
+    "discountPrice":"941",
+    "countInStock":30
 }
 
 
